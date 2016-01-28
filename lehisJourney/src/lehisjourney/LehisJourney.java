@@ -20,8 +20,7 @@ public class LehisJourney {
         Player playerOne = new Player();
         
         playerOne.setName("Fred Flinstone");
-        
-        
+          
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
     }

@@ -58,7 +58,6 @@ public class Player implements Serializable{
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-
         return true;
     }
     
