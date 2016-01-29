@@ -95,7 +95,8 @@ private double coordinates;
     }
 
     public void setCoordinates(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
+//To change body of generated methods, choose Tools | Templates.
     }
 
 

@@ -32,6 +32,7 @@ public class LehisJourney {
         charOne.setDescription("In Wilderness");
         charOne.setCoordinates(2,4);
         
+        
     }
     
 }
