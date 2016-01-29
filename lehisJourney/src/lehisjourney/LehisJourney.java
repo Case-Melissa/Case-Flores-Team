@@ -5,6 +5,7 @@
  */
 package lehisjourney;
 
+import byui.cit260.lehisJourney.model.Char;
 import byui.cit260.lehisJourney.model.Player;
 
 /**
@@ -19,10 +20,18 @@ public class LehisJourney {
     public static void main(String[] args) {
         Player playerOne = new Player();
         
-        playerOne.setName("Fred Flinstone");
+        playerOne.setName("Fred");
           
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+    
+        Char charOne = new Char();
+        
+        charOne.setName("Nephi");
+        charOne.setLifeLevel(50);
+        charOne.setDescription("In Wilderness");
+        charOne.setCoordinates(2,4);
+        
     }
     
 }
