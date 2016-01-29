@@ -6,7 +6,7 @@
 package lehisjourney;
 
 import byui.cit260.lehisJourney.model.Char;
-import byui.cit260.lehisJourney.model.Map;
+import byui.cit260.lehisJourney.model.Item;
 import byui.cit260.lehisJourney.model.Player;
 
 /**
@@ -33,8 +33,9 @@ public class LehisJourney {
         charOne.setDescription("In Wilderness");
         charOne.setCoordinates(2,4);
         
-   
+        Item itemOne = new Item();
         
+        Map mapOne = new Map();
         
     }
     
