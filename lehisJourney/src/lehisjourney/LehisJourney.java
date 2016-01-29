@@ -6,6 +6,7 @@
 package lehisjourney;
 
 import byui.cit260.lehisJourney.model.Char;
+import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
 
 /**
@@ -31,6 +32,8 @@ public class LehisJourney {
         charOne.setLifeLevel(50);
         charOne.setDescription("In Wilderness");
         charOne.setCoordinates(2,4);
+        
+   
         
         
     }
