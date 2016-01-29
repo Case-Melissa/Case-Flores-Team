@@ -37,6 +37,12 @@ public class LehisJourney {
         
         Map mapOne = new Map();
         
+        
+        
+        Design basketOne = new Design();
+        
+        
+        Tent tentOne = new Tent();
     }
     
 }
