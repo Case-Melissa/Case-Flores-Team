@@ -18,7 +18,7 @@ public class Design implements Serializable {
     private double base;
     private double height;
     private double width;
-
+    private Location location;
     public Design() {
     }
 

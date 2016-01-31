@@ -19,7 +19,7 @@ public class Tent implements Serializable{
     private String description;
     private int coordinates;
     private double occupants;
-
+    private Game game;
     public Tent() {
     }
 

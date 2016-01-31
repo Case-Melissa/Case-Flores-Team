@@ -18,7 +18,9 @@ private String name;
 private double lifeLevel;
 private String description;
 private double coordinates;
-
+private Item item;
+private Player player;
+private Location location;
     public Char() {
     }
 

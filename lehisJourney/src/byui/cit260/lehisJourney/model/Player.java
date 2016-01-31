@@ -8,6 +8,7 @@ package byui.cit260.lehisJourney.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+
 /**
  *
  * @author Case-Melissa
@@ -16,7 +17,8 @@ public class Player implements Serializable{
     
 //Class instance variables
     private String name;
-
+    private Item item;
+    private Char char;
     public Player() {
     }
 
