@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author Melissa Case
  */
-public class Char implements Serializable {
+public class Character implements Serializable {
 //Class instance variable
 private String name;
 private double lifeLevel;
@@ -21,7 +21,7 @@ private double coordinates;
 private Item item;
 private Player player;
 private Location location;
-    public Char() {
+    public Character() {
     }
 
 
@@ -83,7 +83,7 @@ private Location location;
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Char other = (Char) obj;
+        final Character other = (Character) obj;
         if (Double.doubleToLongBits(this.lifeLevel) != Double.doubleToLongBits(other.lifeLevel)) {
             return false;
         }

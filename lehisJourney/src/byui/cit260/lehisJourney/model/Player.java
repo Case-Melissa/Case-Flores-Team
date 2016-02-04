@@ -8,17 +8,17 @@ package byui.cit260.lehisJourney.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-
 /**
  *
  * @author Case-Melissa
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
 //Class instance variables
     private String name;
     private Item item;
-    private Char char;
+    private Character c;
+
     public Player() {
     }
 
@@ -29,8 +29,7 @@ public class Player implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
-    
-    
+
     @Override
     public String toString() {
         return "Player{" + "name=" + name + '}';
@@ -40,7 +39,7 @@ public class Player implements Serializable{
     public int hashCode() {
         int hash = 5;
         hash = 37 * hash + Objects.hashCode(this.name);
-    
+
         return hash;
     }
 
@@ -58,8 +57,5 @@ public class Player implements Serializable{
         final Player other = (Player) obj;
         return Objects.equals(this.name, other.name);
     }
-    
-    
-    
-}
 
+}

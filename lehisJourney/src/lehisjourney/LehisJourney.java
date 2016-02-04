@@ -5,8 +5,9 @@
  */
 package lehisjourney;
 
-import byui.cit260.lehisJourney.model.Char;
+import byui.cit260.lehisJourney.model.Character;
 import byui.cit260.lehisJourney.model.Design;
+import byui.cit260.lehisJourney.model.Item;
 import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
 import byui.cit260.lehisJourney.model.Tent;
@@ -28,7 +29,7 @@ public class LehisJourney {
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
     
-        Char charOne = new Char();
+        Character charOne = new Character();
         
         charOne.setName("Nephi");
         charOne.setLifeLevel(50);
