@@ -17,7 +17,7 @@ public class Player implements Serializable {
 //Class instance variables
     private String name;
     private Item item;
-    private Character c;
+    private Character character;
 
     public Player() {
     }
