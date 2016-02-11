@@ -30,5 +30,22 @@ public class ItemControl {
         if (platesFit <=4.5){        
         }
             return platesFit;
+    
+}
+    public double calcLabansChallenge(double height, double diameter){
+    
+    if (height < 36 || height > 48){
+    return -1;
+}
+    if (diameter < 24 || diameter > 30){
+    return -1;
+}
+    double r = diameter / 2;
+    double volume = (Math.PI * r * r * height);
+    
+    if (volume == 25861.59){
     }
+        return volume;
+}
+  
 }
