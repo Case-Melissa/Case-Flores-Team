@@ -5,6 +5,7 @@
  */
 package byui.cit260.lehisJourney.model;
 
+import byui.cit260.lehisJourney.model.Location;
 import java.io.Serializable;
 import java.util.Objects;
 
