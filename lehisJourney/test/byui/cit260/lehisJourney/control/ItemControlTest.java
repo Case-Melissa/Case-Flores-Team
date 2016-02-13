@@ -197,5 +197,90 @@ public class ItemControlTest {
         result = instance.calcLabansChallenge(height, diameter);
         assertEquals(expResult, result, 0.1);
     }
+
+    /**
+     * Test of calcAreaTentRoom method, of class ItemControl.
+     */
+    @Test
+    public void testCalcAreaTentRoom() {
+          /**********
+         * Test #1
+         **********/
+        System.out.println("calcAreaTentRoom");
+        double length = 16.0;
+        double width = 16.0;
+        double height = 8.0;
+        int peopleInRoom = 2;
+        ItemControl instance = new ItemControl();
+        double expResult = 256.0;
+        double result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
+        assertEquals(expResult, result, 0.01);
+        
+         /**********
+         * Test #2
+         **********/
+        length = 24.0;
+        width = 16.0;
+        height = 8.0;
+        peopleInRoom = 2;
+        expResult = -1;
+        result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
+        assertEquals(expResult, result, 0.01);
+        
+         /**********
+         * Test #3
+         **********/
+        length = 20.0;
+        width = -4.0;
+        height = 8.0;
+        peopleInRoom = 2;
+        expResult = -1;
+        result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
+        assertEquals(expResult, result, 0.01);
+        
+         /**********
+         * Test #4
+         **********/
+        length = 16.0;
+        width = 22.0;
+        height = 10.0;
+        peopleInRoom = 3;
+        expResult = -1;
+        result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
+        assertEquals(expResult, result, 0.01);
+        
+         /**********
+         * Test #5
+         **********/
+        length = 18.0;
+        width = 18.0;
+        height = 8.0;
+        peopleInRoom = 3;
+        expResult = 324;
+        result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
+        assertEquals(expResult, result, 0.01);
+        
+         /**********
+         * Test #5
+         **********/
+        length = 19.0;
+        width = 19.0;
+        height = 8.0;
+        peopleInRoom = 1;
+        expResult = -1;
+        result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
+        assertEquals(expResult, result, 0.01);
+        
+         /**********
+         * Test #6
+         **********/
+        length = 20.0;
+        width = 20.0;
+        height = 8.0;
+        peopleInRoom = 4;
+        expResult = 400;
+        result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
+        assertEquals(expResult, result, 0.01);
+    }
     
 }
