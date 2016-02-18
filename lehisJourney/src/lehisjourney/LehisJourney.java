@@ -7,6 +7,7 @@ package lehisjourney;
 
 import byui.cit260.lehisJourney.model.Character;
 import byui.cit260.lehisJourney.model.Design;
+import byui.cit260.lehisJourney.model.Game;
 import byui.cit260.lehisJourney.model.Item;
 import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
@@ -17,26 +18,35 @@ import byui.cit260.lehisJourney.model.Tent;
  * @author home
  */
 public class LehisJourney {
-
-    /**
+       
+          
+       private static Player player;
+       private static Game game;
+       /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player playerOne = new Player();
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        LehisJourney.player = player;
+    }
+
+    public static Game getGame() {
+        return game;
+    }
+
+    public static void setGame(Game game) {
+        LehisJourney.game = game;
+    }
         
-        playerOne.setName("Fred");
-          
-        String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
     
-        Character charOne = new Character();
-        
-        charOne.setName("Nephi");
-        charOne.setLifeLevel(50);
-        charOne.setDescription("In Wilderness");
-        charOne.setCoordinates(2,4);
-        
-        Item itemOne = new Item();
+    
+    Item itemOne = new Item();
         
         Map mapOne = new Map();
         
@@ -48,4 +58,4 @@ public class LehisJourney {
         Tent tentOne = new Tent();
     }
     
-}
+

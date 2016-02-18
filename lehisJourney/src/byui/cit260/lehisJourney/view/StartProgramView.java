@@ -5,23 +5,55 @@
  */
 package byui.cit260.lehisJourney.view;
 
+import byui.cit260.lehisJourney.control.ProgramController;
+import byui.cit260.lehisJourney.model.Player;
+import java.util.Scanner;
+import lehisjourney.LehisJourney;
+
 /**
  *
  * @author home
  */
 public class StartProgramView {
     
-    private String promptMessage;
+  public StartProgramView(){
+  
+  }
+    public void StartProgramView(){
+        displayBanner();
+    String playerName = getPlayerName();
     
-    public StartProgramView(){
-      
-        this.promptMessage = "/nPlease enter your name: ";
-        // display the banner when view is created
-        this.displayBanner();
+    Player player = ProgramController.createPlayer(playerName);
+    
+     LehisJourney.setPlayer(player);
+     
+     displayWelcomeMessage(player.getName());
+    
+    System.out.println("Name is " + player.getName());
     }
-
-    private void displayBanner() {
-     System.out.println(
+      public String getPlayerName(){
+          
+          boolean isValidName = false;
+          String name = "";
+          Scanner keyboard =  new Scanner(System.in);
+      
+        System.out.println("Please enter your name: ");
+          
+          while(!isValidName){
+           String input = keyboard.nextLine();
+           
+           if(input == null || input.length() >= 2){
+               isValidName = true;
+               name = input;
+          } else{
+       System.out.print("Input is invalid - name must be at least 2 characters");
+           }
+          }
+          return name;
+          }
+    public void displayBanner() {
+      String welcome = "";
+       welcome =
         "\n***********************************************"
       + "\n*                                             *"
       + "\n* This is the game of Lehi's Journey          *"
@@ -39,7 +71,16 @@ public class StartProgramView {
       + "\n* laban's challenge. After completing the     *"
       + "\n* challenge you must design a basket to carry *"
       + "\n* the plates back to your family.             *"
-     );
-    }
-    }    
+     ;
+        System.out.println(welcome);
     
+    } 
+    public void displayWelcomeMessage(String playerName){
+        System.out.println("============================");
+        System.out.println("Welcome "+ playerName + ".");
+        System.out.println("Have Fun");
+        System.out.println("============================");
+        
+}
+}
+
