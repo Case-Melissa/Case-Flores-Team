@@ -28,8 +28,17 @@ public class StartProgramView {
       + "\n* In this game you will become one of Lehi's  *"
       + "\n* four sons and go on a journey into the      *"
       + "\n* wilderness, then back to visit Laban and    *"
-      + "* finally go back to your father                *"
-      + ""
+      + "\n* finally go back to your father.             *"
+      + "\n*                                             *"
+      + "\n* To start this perilous journey you will     *"
+      + "\n* need to gather supplies to pitch a tent in  *"
+      + "\n* the wilderness. You must find a good        *"
+      + "\n* location to pitch the tent. Along the       *"
+      + "\n* journey you will have to hunt for resources *"
+      + "\n* and food. Then you will have to complete    *"
+      + "\n* laban's challenge. After completing the     *"
+      + "\n* challenge you must design a basket to carry *"
+      + "\n* the plates back to your family.             *"
      );
     }
     }    
