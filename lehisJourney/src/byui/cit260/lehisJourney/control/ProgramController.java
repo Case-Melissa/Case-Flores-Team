@@ -19,7 +19,7 @@ public class ProgramController {
         return null;
     }
 
-player p = new Player();
+Player p = new Player();
 p.setName(playerName);
 return p;
     }
