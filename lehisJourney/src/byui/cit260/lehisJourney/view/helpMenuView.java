@@ -13,16 +13,15 @@ import lehisjourney.LehisJourney;
  *
  * @author home
  */
-public class MainMenuView {
-  
-  private final String menu = "\n"
-          + "\nN - New Game"
-          + "\nL - Load Saved Game"
-          + "\n? - Help Menu"
-          + "\nS - Save Current Game"
+public class helpMenuView {
+   private final String menu = "\n"
+          + "\n? - Help"
+          + "\nK - Shortcut Keys"
+          + "\nF - FAQs"
+          + "\nH - Hints"
           + "\nQ - Quit";
           
-          public MainMenuView(){
+          public helpMenuView(){
          
       }
           
@@ -43,17 +42,17 @@ public class MainMenuView {
        public void doAction(char selection){
            
            switch(selection){
-               case 'N':
-                   startNewGame();
+               case '?':
+                   help();
                    break;
-               case 'L':
-                    loadSavedGame();
+               case 'K':
+                    shortcutKeys();
                     break;
-                case '?':
-                    helpMenu();
+                case 'F':
+                    frequentlyAskedQuestions();
                     break;
-                case 'S':
-                    saveCurrentGame();
+                case 'H':
+                    hints();
                     break;
                 case 'Q':
                     break;
@@ -101,5 +100,21 @@ public class MainMenuView {
         
          System.out.println ("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
     }
-          }
+
+    private void help() {
+        System.out.println("Help with game play");
+    }
+
+    private void shortcutKeys() {
+        System.out.println("Shortcut keys for gmaeplay");
+    }
+
+    private void frequentlyAskedQuestions() {
+        System.out.println("Frequently Asked Questions");
+    }
+
+    private void hints() {
+        System.out.println("Hints for Solving Challenges");
+    }
+          } 
 
