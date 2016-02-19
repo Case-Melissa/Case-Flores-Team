@@ -6,7 +6,6 @@
 package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.control.ProgramController;
-import byui.cit260.lehisJourney.view.helpMenuView;
 import java.util.Scanner;
 import lehisjourney.LehisJourney;
 

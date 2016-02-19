@@ -5,19 +5,21 @@
  */
 package byui.cit260.lehisJourney.view;
 
+import byui.cit260.lehisJourney.control.ProgramController;
 import java.util.Scanner;
+import lehisjourney.LehisJourney;
 
 /**
  *
  * @author home
  */
 public class helpMenuView {
-private final String menu = "\n"
+   private final String menu = "\n"
           + "\n? - Help"
           + "\nK - Shortcut Keys"
-          + "\nF - FAQ's"
+          + "\nF - FAQs"
           + "\nH - Hints"
-          + "\nQ - Exit Menu";
+          + "\nQ - Quit";
           
           public helpMenuView(){
          
@@ -47,9 +49,9 @@ private final String menu = "\n"
                     shortcutKeys();
                     break;
                 case 'F':
-                    fAQ();
+                    frequentlyAskedQuestions();
                     break;
-                case 'h':
+                case 'H':
                     hints();
                     break;
                 case 'Q':
@@ -85,7 +87,8 @@ private final String menu = "\n"
     }
 
     private void helpMenu() {
-         System.out.println ("CALLED HELP MENU - NOT IMPLEMENTED YET.");
+         helpMenuView helpMenu = new helpMenuView();
+         helpMenu.displayMenu();
     }
 
     private void loadSavedGame() {
@@ -93,25 +96,25 @@ private final String menu = "\n"
     }
 
     private void startNewGame() {
+        ProgramController.createNewGame(LehisJourney.getPlayer());
+        
          System.out.println ("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
     }
 
-    private void shortcutKeys() {
-        System.out.println("Shortcut Keys for gameplay");
-    }
-
     private void help() {
-        System.out.println("How to play the game");
+        System.out.println("Help with game play");
     }
 
-    private void fAQ() {
+    private void shortcutKeys() {
+        System.out.println("Shortcut keys for gmaeplay");
+    }
+
+    private void frequentlyAskedQuestions() {
         System.out.println("Frequently Asked Questions");
     }
 
     private void hints() {
-        System.out.println("Hints for solving challenges");
-    
-          }
+        System.out.println("Hints for Solving Challenges");
     }
-
+          } 
 
