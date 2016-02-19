@@ -29,6 +29,9 @@ public class StartProgramView {
      
      displayWelcomeMessage(player.getName());
     
+     MainMenuView mainMenu = new MainMenuView ();
+     mainMenu.displayMenu();
+     
     System.out.println("Name is " + player.getName());
     }
       public String getPlayerName(){
