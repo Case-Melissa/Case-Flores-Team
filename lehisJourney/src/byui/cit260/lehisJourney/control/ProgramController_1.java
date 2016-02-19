@@ -5,7 +5,9 @@
  */
 package byui.cit260.lehisJourney.control;
 
+import byui.cit260.lehisJourney.model.Game;
 import byui.cit260.lehisJourney.model.Player;
+import lehisjourney.LehisJourney;
 
 /**
  *
@@ -22,5 +24,10 @@ public class ProgramController {
 Player p = new Player();
 p.setName(playerName);
 return p;
+    }
+    public static void createNewGame(Player player){
+        Game g = new Game();
+        g.SetPlayer(player);
+        LehisJourney.setGame(g);
     }
 }

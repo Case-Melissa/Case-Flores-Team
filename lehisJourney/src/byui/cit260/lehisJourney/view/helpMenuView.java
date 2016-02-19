@@ -5,25 +5,21 @@
  */
 package byui.cit260.lehisJourney.view;
 
-import byui.cit260.lehisJourney.control.ProgramController;
-import byui.cit260.lehisJourney.view.helpMenuView;
 import java.util.Scanner;
-import lehisjourney.LehisJourney;
 
 /**
  *
  * @author home
  */
-public class MainMenuView {
-  
-  private final String menu = "\n"
-          + "\nN - New Game"
-          + "\nL - Load Saved Game"
-          + "\n? - Help Menu"
-          + "\nS - Save Current Game"
-          + "\nQ - Quit";
+public class helpMenuView {
+private final String menu = "\n"
+          + "\n? - Help"
+          + "\nK - Shortcut Keys"
+          + "\nF - FAQ's"
+          + "\nH - Hints"
+          + "\nQ - Exit Menu";
           
-          public MainMenuView(){
+          public helpMenuView(){
          
       }
           
@@ -44,17 +40,17 @@ public class MainMenuView {
        public void doAction(char selection){
            
            switch(selection){
-               case 'N':
-                   startNewGame();
+               case '?':
+                   help();
                    break;
-               case 'L':
-                    loadSavedGame();
+               case 'K':
+                    shortcutKeys();
                     break;
-                case '?':
-                    helpMenu();
+                case 'F':
+                    fAQ();
                     break;
-                case 'S':
-                    saveCurrentGame();
+                case 'h':
+                    hints();
                     break;
                 case 'Q':
                     break;
@@ -89,8 +85,7 @@ public class MainMenuView {
     }
 
     private void helpMenu() {
-         helpMenuView helpMenu = new helpMenuView();
-         helpMenu.displayMenu();
+         System.out.println ("CALLED HELP MENU - NOT IMPLEMENTED YET.");
     }
 
     private void loadSavedGame() {
@@ -98,9 +93,25 @@ public class MainMenuView {
     }
 
     private void startNewGame() {
-        ProgramController.createNewGame(LehisJourney.getPlayer());
-        
          System.out.println ("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
     }
+
+    private void shortcutKeys() {
+        System.out.println("Shortcut Keys for gameplay");
+    }
+
+    private void help() {
+        System.out.println("How to play the game");
+    }
+
+    private void fAQ() {
+        System.out.println("Frequently Asked Questions");
+    }
+
+    private void hints() {
+        System.out.println("Hints for solving challenges");
+    
           }
+    }
+
 
