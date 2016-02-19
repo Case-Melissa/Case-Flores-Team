@@ -212,7 +212,7 @@ public class ItemControlTest {
         double height = 8.0;
         int peopleInRoom = 2;
         ItemControl instance = new ItemControl();
-        double expResult = 256.0;
+        double expResult = 128.00;
         double result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
         assertEquals(expResult, result, 0.01);
         
@@ -256,7 +256,7 @@ public class ItemControlTest {
         width = 18.0;
         height = 8.0;
         peopleInRoom = 3;
-        expResult = 324;
+        expResult = 108;
         result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
         assertEquals(expResult, result, 0.01);
         
@@ -278,7 +278,7 @@ public class ItemControlTest {
         width = 20.0;
         height = 8.0;
         peopleInRoom = 4;
-        expResult = 400;
+        expResult = 100;
         result = instance.calcAreaTentRoom(length, width, height, peopleInRoom);
         assertEquals(expResult, result, 0.01);
     }
