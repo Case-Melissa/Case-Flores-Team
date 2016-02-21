@@ -74,7 +74,7 @@ public class helpMenuView {
            input = input.trim();
            
            if(input == null || input.length() == 0){
-               System.err.println("Invalid inout - please enter a valid character.");
+               System.out.println("Invalid input - please enter a valid character.");
            }else {
                isValid = true;
            }
@@ -106,7 +106,7 @@ public class helpMenuView {
     }
 
     private void shortcutKeys() {
-        System.out.println("Shortcut keys for gmaeplay");
+        System.out.println("Shortcut keys for gameplay");
     }
 
     private void frequentlyAskedQuestions() {
