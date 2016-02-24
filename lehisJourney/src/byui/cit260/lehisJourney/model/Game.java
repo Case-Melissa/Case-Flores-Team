@@ -23,5 +23,9 @@ public class Game {
     public void setPlayer(Player player) {
         this.player = player;
     }
+
+    public void SetPlayer(Player player) {
+        System.out.println ("CALLED SET PLAYER - NOT IMPLEMENTED YET.");
+    }
       
 }
