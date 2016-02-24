@@ -82,23 +82,9 @@ public class helpMenuView {
        return input.toUpperCase();
        }
 
-    private void saveCurrentGame() {
-        System.out.println ("CALLED SAVE CURRENT GAME - NOT IMPLEMENTED YET.");
-    }
-
     private void helpMenu() {
          helpMenuView helpMenu = new helpMenuView();
          helpMenu.displayMenu();
-    }
-
-    private void loadSavedGame() {
-         System.out.println ("CALLED LOAD SAVED GAME - NOT IMPLEMENTED YET.");
-    }
-
-    private void startNewGame() {
-        ProgramController.createNewGame(LehisJourney.getPlayer());
-        
-         System.out.println ("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
     }
 
     private void help() {
