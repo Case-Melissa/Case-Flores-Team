@@ -5,28 +5,26 @@
  */
 package byui.cit260.lehisJourney.view;
 
-import byui.cit260.lehisJourney.control.ProgramController;
 import java.util.Scanner;
-import lehisjourney.LehisJourney;
 
 /**
  *
- * @author home
+ * @author Sylvia
  */
-public class MainMenuView {
-  
-  private final String menu = "\n"
-          + "\nN - New Game"
-          + "\nL - Load Saved Game"
-          + "\n? - Help Menu"
-          + "\nS - Save Current Game"
+public class SaveMenuView {
+    
+    private final String menu = "\n"
+          + "\nL - Load saved Game"
+          + "\nD - Delete a saved Game"
+          + "\nS - Save current Game"
+          + "\nR - Return to gameplay/main menu"
+          + "\nW - Quit game without saving changes"
           + "\nQ - Quit";
-          
-          public MainMenuView(){
-         
-      }
-          
-       public void  displayMenu(){   
+    
+    public SaveMenuView(){
+        
+    }
+    public void  displayMenu(){   
            
            char selection = ' ';
            
@@ -38,22 +36,26 @@ public class MainMenuView {
              
              doAction(selection);
              
-           } while(selection != 'Q');
+           } while(selection != 'R');
 }
        public void doAction(char selection){
            
            switch(selection){
-               case 'N':
-                   startNewGame();
-                   break;
+               
                case 'L':
                     loadSavedGame();
                     break;
-                case '?':
-                    helpMenu();
+                case 'D':
+                    deleteSaveGame();
                     break;
                 case 'S':
                     saveCurrentGame();
+                    break;
+                case 'R':
+                    returnToGame();
+                    break;
+                case 'W':
+                    quitWithoutSaving();
                     break;
                 case 'Q':
                     break;
@@ -61,9 +63,8 @@ public class MainMenuView {
                     System.out.println("Invalid option");
                     break; 
            }
-           
-       }
-       
+}
+
        public String getInput(){
        Scanner keyboard = new Scanner(System.in);
        String input = null;
@@ -80,26 +81,28 @@ public class MainMenuView {
                isValid = true;
            }
        }
+       
        return input.toUpperCase();
+    
        }
+       
+    private void loadSavedGame() {
+         System.out.println ("CALLED LOAD SAVE GAME - NOT IMPLEMENTED YET.");
+    }
+
+    private void deleteSaveGame() {
+        System.out.println ("CALLED DELETE SAVE GAME - NOT IMPLEMENTED YET.");
+    }
 
     private void saveCurrentGame() {
         System.out.println ("CALLED SAVE CURRENT GAME - NOT IMPLEMENTED YET.");
     }
 
-    private void helpMenu() {
-         helpMenuView helpMenu = new helpMenuView();
-         helpMenu.displayMenu();
+    private void returnToGame() {
+       System.out.println ("CALLED RETURN TO GAME - NOT IMPLEMENTED YET.");
     }
 
-    private void loadSavedGame() {
-         System.out.println ("CALLED LOAD SAVED GAME - NOT IMPLEMENTED YET.");
+    private void quitWithoutSaving() {
+       System.out.println ("CALLED QUIT WITHOUT SAVING THE GAME - NOT IMPLEMENTED YET."); 
     }
-
-    private void startNewGame() {
-        ProgramController.createNewGame(LehisJourney.getPlayer());
-        
-         System.out.println ("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
-    }
-          }
-
+}

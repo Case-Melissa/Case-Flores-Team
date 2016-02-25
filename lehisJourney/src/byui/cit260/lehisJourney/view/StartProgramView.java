@@ -20,17 +20,22 @@ public class StartProgramView {
   
   }
     public void StartProgramView(){
-        displayBanner();
+        
+    displayBanner();
+    
     String playerName = getPlayerName();
     
     Player player = ProgramController.createPlayer(playerName);
     
-     LehisJourney.setPlayer(player);
-     
-     displayWelcomeMessage(player.getName());
+    LehisJourney.setPlayer(player);
+
+    displayWelcomeMessage(player.getName());
+
+    MainMenuView mainMenu = new MainMenuView();
+    mainMenu.displayMenu();
     
-     MainMenuView mainMenu = new MainMenuView ();
-     mainMenu.displayMenu();
+    SaveMenuView saveMenu = new SaveMenuView();
+    saveMenu.displayMenu();
      
     System.out.println("Name is " + player.getName());
     }
@@ -54,8 +59,9 @@ public class StartProgramView {
           }
           return name;
           }
+      
     public void displayBanner() {
-      String welcome = "";
+      String welcome = " ";
        welcome =
         "\n***********************************************"
       + "\n*                                             *"
