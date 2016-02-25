@@ -17,9 +17,7 @@ public class MainMenuView {
   
   private final String menu = "\n"
           + "\nN - New Game"
-          + "\nL - Load Saved Game"
           + "\n? - Help Menu"
-          + "\nS - Save Current Game"
           + "\nQ - Quit";
           
           public MainMenuView(){
@@ -43,17 +41,11 @@ public class MainMenuView {
        public void doAction(char selection){
            
            switch(selection){
-               case 'N':
+                case 'N':
                    startNewGame();
                    break;
-               case 'L':
-                    loadSavedGame();
-                    break;
                 case '?':
                     helpMenu();
-                    break;
-                case 'S':
-                    saveCurrentGame();
                     break;
                 case 'Q':
                     break;
@@ -69,7 +61,7 @@ public class MainMenuView {
        String input = null;
        boolean isValid = false;
        
-       while(isValid){
+       while(!isValid){
            System.out.println("Please select an option: ");
            input =  keyboard.nextLine();
            input = input.trim();
@@ -83,17 +75,10 @@ public class MainMenuView {
        return input.toUpperCase();
        }
 
-    private void saveCurrentGame() {
-        System.out.println ("CALLED SAVE CURRENT GAME - NOT IMPLEMENTED YET.");
-    }
-
+ 
     private void helpMenu() {
          helpMenuView helpMenu = new helpMenuView();
          helpMenu.displayMenu();
-    }
-
-    private void loadSavedGame() {
-         System.out.println ("CALLED LOAD SAVED GAME - NOT IMPLEMENTED YET.");
     }
 
     private void startNewGame() {
