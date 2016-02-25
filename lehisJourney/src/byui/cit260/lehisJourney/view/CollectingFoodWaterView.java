@@ -71,20 +71,45 @@ public class CollectingFoodWaterView {
         boolean isValid = false;
 
         while (!isValid) {
-            System.out.println("Please select an option: ");
+            System.out.println("Please enter a height: ");
             input = keyboard.nextLine();
             input = input.trim();
 
             if (input == null || input.length() == 0) {
-                System.out.println("Invalid input - please enter a valid character.");
+                System.out.println("Invalid input - please enter a valid number.");
             } else {
                 isValid = true;
             }
         }
 
-        return input.toUpperCase();
+        return input;
 
     }
+      public String getInputFirst() {
+        Scanner keyboard = new Scanner(System.in);
+        String input = null;
+        boolean isValid = false;
+
+        while (!isValid) {
+            System.out.println("Please enter a distance: ");
+            input = keyboard.nextLine();
+            input = input.trim();
+
+            if (input == null || input.length() == 0) {
+                System.out.println("Invalid input - please enter a valid number.");
+            } else {
+                isValid = true;
+            }
+        }
+
+        return input;
+
+    }
+      
+    private void CollectingFoodWater(){
+     CollectingFoodWaterView CollectingFoodWater = new CollectingFoodWaterView();
+     CollectingFoodWater.displayMenu();
+    }  
 
     private void lookBerries() {
         System.out.println("Look for Berries");
