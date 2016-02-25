@@ -85,5 +85,9 @@ public class MainMenuView {
         
          System.out.println ("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
     }
+    private void gamePlayMenu(){
+        GamePlayMenuView gamePlayMenu = new GamePlayMenuView();
+         gamePlayMenu.displayMenu();
+    }
           }
 
