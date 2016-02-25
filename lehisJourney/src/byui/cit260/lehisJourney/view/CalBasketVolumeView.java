@@ -18,7 +18,7 @@ public class CalBasketVolumeView {
              + "\nH - Enter basket height"
              + "\nL - Enter basket length"
              + "\nW - Enter basket width"
-            + "\nQ - Quit challenge";  
+             + "\nQ - Quit challenge";  
  
     public CalBasketVolumeView (){
     }
