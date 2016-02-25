@@ -74,7 +74,6 @@ public class MainMenuView {
        }
        return input.toUpperCase();
        }
-
  
     private void helpMenu() {
          helpMenuView helpMenu = new helpMenuView();
