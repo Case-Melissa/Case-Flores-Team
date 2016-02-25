@@ -68,7 +68,7 @@ public class helpMenuView {
        String input = null;
        boolean isValid = false;
        
-       while(isValid){
+       while(!isValid){
            System.out.println("Please select an option: ");
            input =  keyboard.nextLine();
            input = input.trim();
