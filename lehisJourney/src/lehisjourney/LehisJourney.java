@@ -12,6 +12,7 @@ import byui.cit260.lehisJourney.model.Item;
 import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
 import byui.cit260.lehisJourney.model.Tent;
+import byui.cit260.lehisJourney.view.StartProgramView;
 
 /**
  *
@@ -26,6 +27,10 @@ public class LehisJourney {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+         StartProgramView startView = new StartProgramView();
+         startView.startProgram();
+         
     }
 
     public static Player getPlayer() {
