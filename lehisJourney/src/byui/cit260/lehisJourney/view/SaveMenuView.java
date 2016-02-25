@@ -87,19 +87,19 @@ public class SaveMenuView {
        }
        
     private void loadSavedGame() {
-         System.out.println ("CALLED LOAD SAVE GAME - NOT IMPLEMENTED YET.");
+         System.out.println ("Load and Save Game");
     }
 
     private void deleteSaveGame() {
-        System.out.println ("CALLED DELETE SAVE GAME - NOT IMPLEMENTED YET.");
+        System.out.println ("Delete Save Game");
     }
 
     private void saveCurrentGame() {
-        System.out.println ("CALLED SAVE CURRENT GAME - NOT IMPLEMENTED YET.");
+        System.out.println ("Save current Game");
     }
 
     private void returnToGame() {
-       System.out.println ("CALLED RETURN TO GAME - NOT IMPLEMENTED YET.");
+       System.out.println ("Return to Game");
     }
 
     private void quitWithoutSaving() {
