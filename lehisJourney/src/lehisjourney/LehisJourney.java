@@ -19,18 +19,18 @@ import byui.cit260.lehisJourney.view.StartProgramView;
  * @author home
  */
 public class LehisJourney {
-       
-          
-       private static Player player;
-       private static Game game;
-       /**
+
+    private static Player player;
+    private static Game game;
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-         StartProgramView startView = new StartProgramView();
-         startView.startProgram();
-         
+
+        StartProgramView startView = new StartProgramView();
+        startView.startProgram();
+
     }
 
     public static Player getPlayer() {
@@ -48,19 +48,12 @@ public class LehisJourney {
     public static void setGame(Game game) {
         LehisJourney.game = game;
     }
-        
-    
-    
-    Item itemOne = new Item();
-        
-        Map mapOne = new Map();
-        
-        
-        
-        Design basketOne = new Design();
-        
-        
-        Tent tentOne = new Tent();
-    }
-    
 
+    Item itemOne = new Item();
+
+    Map mapOne = new Map();
+
+    Design basketOne = new Design();
+
+    Tent tentOne = new Tent();
+}
