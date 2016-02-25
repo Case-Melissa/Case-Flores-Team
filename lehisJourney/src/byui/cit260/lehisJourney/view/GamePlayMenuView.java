@@ -81,18 +81,18 @@ public String getInput(){
        }
 
     private void specialActionMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println ("Open special action menu."); 
     }
 
     private void moveToALocation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println ("Move to a new location."); 
     }
 
     private void lookForItems() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println ("Look for an item in current location."); 
     }
 
     private void viewMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println ("View the map."); 
     }
 }
