@@ -79,6 +79,10 @@ public String getInput(){
        return input.toUpperCase();
     
        }
+ private void gamePlayMenu() {
+         GamePlayMenuView gamePlayMenu = new GamePlayMenuView();
+         gamePlayMenu.displayMenu();
+    }
 
     private void specialActionMenu() {
        System.out.println ("Open special action menu."); 
