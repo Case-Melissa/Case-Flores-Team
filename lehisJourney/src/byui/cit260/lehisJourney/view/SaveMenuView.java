@@ -103,6 +103,6 @@ public class SaveMenuView {
     }
 
     private void quitWithoutSaving() {
-       System.out.println ("CALLED QUIT WITHOUT SAVING THE GAME - NOT IMPLEMENTED YET."); 
+       System.out.println ("Quit the game without saving it"); 
     }
 }
