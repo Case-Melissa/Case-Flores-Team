@@ -11,9 +11,6 @@ package byui.cit260.lehisJourney.control;
  */
 public class ItemControl {
 
-
-    
-
     public double calcBasketVolume(double height, double width, double length) {
 
         if (height < 8 || height > 36) { // height is incorrect
@@ -54,7 +51,7 @@ public class ItemControl {
 
     public double calcAreaTentRoom(double length, double width, double height, int peopleInRoom) {
 
-        if (height < 8 || height > 8) { // height is incorrect
+        if (height != 8) { // height is incorrect
             return -1;
         }
         if (width < 16 || width > 22) { // width is incorrect
