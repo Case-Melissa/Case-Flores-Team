@@ -36,7 +36,7 @@ public class SaveMenuView {
              
              doAction(selection);
              
-           } while(selection != 'R');
+           } while(selection != 'Q');
 }
        public void doAction(char selection){
            
