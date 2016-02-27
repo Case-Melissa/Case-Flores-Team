@@ -14,18 +14,19 @@ import lehisjourney.LehisJourney;
  * @author home
  */
 public class ProgramController {
-    
-    public static Player createPlayer(String playerName){
-   
-        if(playerName == null){
-        return null; 
+
+    public static Player createPlayer(String playerName) {
+
+        if (playerName == null) {
+            return null;
+        }
+
+        Player p = new Player();
+        p.setName(playerName);
+        return p;
     }
 
-Player p = new Player();
-p.setName(playerName);
-return p;
-    }
-    public static void createNewGame(Player player){
+    public static void createNewGame(Player player) {
         Game g = new Game();
         g.SetPlayer(player);
         LehisJourney.setGame(g);
