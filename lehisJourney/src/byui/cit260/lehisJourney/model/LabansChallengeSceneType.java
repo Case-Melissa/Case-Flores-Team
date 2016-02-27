@@ -16,44 +16,44 @@ import java.util.Objects;
 public class LabansChallengeSceneType implements Serializable {
     
    // class instance variables
-    private String diameter;
-    private String height;
-    private String base;
-    private String volume;
+    private double diameter;
+    private double height;
+    private double base;
+    private double volume;
     private Location location;
 
     public LabansChallengeSceneType() {
     }
 
-    public String getDiameter() {
+    public double getDiameter() {
         return diameter;
     }
 
-    public void setDiameter(String diameter) {
+    public void setDiameter(double diameter) {
         this.diameter = diameter;
     }
 
-    public String getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(String height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public String getBase() {
+    public double getBase() {
         return base;
     }
 
-    public void setBase(String base) {
+    public void setBase(double base) {
         this.base = base;
     }
 
-    public String getVolume() {
+    public double getVolume() {
         return volume;
     }
 
-    public void setVolume(String volume) {
+    public void setVolume(double volume) {
         this.volume = volume;
     }
 
