@@ -11,9 +11,6 @@ package byui.cit260.lehisJourney.control;
  */
 public class ItemControl {
 
-    public static double calcBasketVolume() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     
 
