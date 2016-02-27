@@ -108,7 +108,7 @@ public class CollectingFoodWaterView {
       
     private void CollectingFoodWater(){
      CollectingFoodWaterView CollectingFoodWater = new CollectingFoodWaterView();
-     CollectingFoodWater.displayMenu();
+     CollectingFoodWater.displayMenu(); 
     }  
 
     private void lookBerries() {
