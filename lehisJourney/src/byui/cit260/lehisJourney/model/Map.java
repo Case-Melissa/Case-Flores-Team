@@ -12,13 +12,13 @@ import javax.tools.DocumentationTool.Location;
  * @author Melissa Case
  */
 public class Map {
-    
+
     private static final int NUM_ROWS = 6;
     private static final int NUM_COLS = 6;
-    
+
     private Location[][] matrix;
-    
-    public Map(){
-        matrix = new Location [NUM_ROWS][NUM_COLS];
+
+    public Map() {
+        matrix = new Location[NUM_ROWS][NUM_COLS];
     }
 }

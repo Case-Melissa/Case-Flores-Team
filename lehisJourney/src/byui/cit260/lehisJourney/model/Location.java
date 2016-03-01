@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author Sylvia
  */
-public class Location implements Serializable{
-    
+public class Location implements Serializable {
+
     // class instance variables
     // class instance variables
     private String row;
@@ -134,5 +134,4 @@ public class Location implements Serializable{
         return Objects.equals(this.labansChallengeSceneType, other.labansChallengeSceneType);
     }
 
-    
 }

@@ -14,16 +14,17 @@ import java.util.Objects;
  */
 public class Character implements Serializable {
 //Class instance variable
-private String name;
-private double lifeLevel;
-private String description;
-private double coordinates;
-private Item item;
-private Player player;
-private Location location;
+
+    private String name;
+    private double lifeLevel;
+    private String description;
+    private double coordinates;
+    private Item item;
+    private Player player;
+    private Location location;
+
     public Character() {
     }
-
 
     public String getName() {
         return name;
@@ -61,7 +62,7 @@ private Location location;
     public String toString() {
         return "Character{" + "name=" + name + ", lifeLevel=" + lifeLevel + ", description=" + description + ", coordinates=" + coordinates + '}';
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 3;
@@ -97,9 +98,8 @@ private Location location;
     }
 
     public void setCoordinates(int i, int i0) {
-       
+
 //To change body of generated methods, choose Tools | Templates.
     }
-
 
 }

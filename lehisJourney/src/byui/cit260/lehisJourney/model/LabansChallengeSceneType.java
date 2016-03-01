@@ -14,8 +14,8 @@ import java.util.Objects;
  * @author Sylvia
  */
 public class LabansChallengeSceneType implements Serializable {
-    
-   // class instance variables
+
+    // class instance variables
     private double diameter;
     private double height;
     private double base;
@@ -111,6 +111,4 @@ public class LabansChallengeSceneType implements Serializable {
         return true;
     }
 
-    
-    
 }

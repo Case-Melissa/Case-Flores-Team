@@ -12,14 +12,15 @@ import java.util.Objects;
  *
  * @author home
  */
-public class Tent implements Serializable{
-    
+public class Tent implements Serializable {
+
     //Class instance variable
     private double items;
     private String description;
     private int coordinates;
     private double occupants;
     private Game game;
+
     public Tent() {
     }
 
@@ -93,6 +94,5 @@ public class Tent implements Serializable{
         }
         return Objects.equals(this.description, other.description);
     }
-    
-    
+
 }

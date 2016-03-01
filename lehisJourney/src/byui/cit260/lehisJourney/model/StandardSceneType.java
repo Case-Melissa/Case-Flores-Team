@@ -14,7 +14,7 @@ import java.util.Objects;
  * @author Sylvia
  */
 public class StandardSceneType implements Serializable {
-    
+
     //class instance variables
     private String description;
     private String symbol;
@@ -98,6 +98,4 @@ public class StandardSceneType implements Serializable {
         return true;
     }
 
-    
-    
 }

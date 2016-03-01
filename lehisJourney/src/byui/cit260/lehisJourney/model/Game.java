@@ -10,7 +10,7 @@ package byui.cit260.lehisJourney.model;
  * @author home
  */
 public class Game {
-    
+
     private Player player;
 
     public Game() {
@@ -25,7 +25,7 @@ public class Game {
     }
 
     public void SetPlayer(Player player) {
-        System.out.println ("CALLED SET PLAYER - NOT IMPLEMENTED YET.");
+        System.out.println("CALLED SET PLAYER - NOT IMPLEMENTED YET.");
     }
-      
+
 }
