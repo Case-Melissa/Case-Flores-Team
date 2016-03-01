@@ -85,7 +85,8 @@ public class CollectingFoodWaterView {
         return input;
 
     }
-      public String getInputFirst() {
+
+    public String getInputFirst() {
         Scanner keyboard = new Scanner(System.in);
         String input = null;
         boolean isValid = false;
@@ -105,11 +106,11 @@ public class CollectingFoodWaterView {
         return input;
 
     }
-      
-    private void CollectingFoodWater(){
-     CollectingFoodWaterView CollectingFoodWater = new CollectingFoodWaterView();
-     CollectingFoodWater.displayMenu(); 
-    }  
+
+    private void CollectingFoodWater() {
+        CollectingFoodWaterView CollectingFoodWater = new CollectingFoodWaterView();
+        CollectingFoodWater.displayMenu();
+    }
 
     private void lookBerries() {
         System.out.println("Look for Berries");
