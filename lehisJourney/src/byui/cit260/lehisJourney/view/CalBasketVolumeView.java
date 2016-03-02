@@ -12,100 +12,29 @@ import java.util.Scanner;
  *
  * @author Melissa Case
  */
-public class CalBasketVolumeView {
-
-    private final String menu = "\n"
-            + "\nH - Enter basket height"
-            + "\nL - Enter basket length"
-            + "\nW - Enter basket width"
-            + "\nQ - Quit challenge";
+public class CalBasketVolumeView extends View {
 
     public CalBasketVolumeView() {
+        super("\n"
+                + "\n-------------------------------"
+                + "\n| Calculate Basket Volume Menu"
+                + "\n-------------------------------"
+                + "\nH - Enter basket height"
+                + "\nL - Enter basket length"
+                + "\nW - Enter basket width"
+                + "\nQ - Quit challenge"
+                + "\n-------------------------------");
     }
 
-    public void displayMenu() {
+    @Override
+    public void doAction(String value) {
 
-        char selection = ' ';
-
-        do {
-            System.out.println(menu);
-
-            String input = getInput();
-            selection = input.charAt(0);
-            doAction(selection);
-        } while (selection != 'Q');
-    }
-
-    public void doAction(char selection) {
-
-        double value = ItemControl.calcBasketVolume();
-        if (value < 6912 || value > 6912) {
-            System.out.println("I am sorry that is incorrect, please try again.");
-        } else {
-            System.out.println("A perfect fit!");
-        }
-    }
-
-    public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
-        String input = null;
-        boolean isValid = false;
-
-        while (isValid) {
-            System.out.println("Please enter a height: ");
-            input = keyboard.nextLine();
-            input = input.trim();
-
-            if (input == null || input.length() == 0) {
-                System.out.println("Invalid input - please enter a valid number.");
-            } else {
-                isValid = true;
-            }
-        }
-        return input;
-    }
-
-    public String getInputOne() {
-        Scanner keyboard = new Scanner(System.in);
-        String input = null;
-        boolean isValid = false;
-
-        while (isValid) {
-            System.out.println("Please enter a length: ");
-            input = keyboard.nextLine();
-            input = input.trim();
-
-            if (input == null || input.length() == 0) {
-                System.out.println("Invalid input - please enter a valid number.");
-            } else {
-                isValid = true;
-            }
-        }
-        return input;
-    }
-
-    public String getInputTwo() {
-        Scanner keyboard = new Scanner(System.in);
-        String input = null;
-        boolean isValid = false;
-
-        while (isValid) {
-            System.out.println("Please enter a width: ");
-            input = keyboard.nextLine();
-            input = input.trim();
-
-            if (input == null || input.length() == 0) {
-                System.out.println("Invalid input - please enter a valid number.");
-            } else {
-                isValid = true;
-            }
-        }
-        return input;
+        value = value.toUpperCase();// converts to upper case
     }
 
     private void calBasketVolume() {
         CalBasketVolumeView calBasketVolume = new CalBasketVolumeView();
-        calBasketVolume.displayMenu();
+        calBasketVolume.display();
     }
 
 }

@@ -13,90 +13,32 @@ import lehisjourney.LehisJourney;
  *
  * @author Melissa Case
  */
-public class GamePlayMenuView {
+public class GamePlayMenuView extends View {
 
-    private final String menu = "\n"
+   
+    public GamePlayMenuView() {
+        super("\n"
             + "\nV - View map"
             + "\nV - View current location"
             + "\nI - Look for items at current location"
             + "\nM - Move to a location"
             + "\nS - Special Action"
-            + "\nQ - Quit";
-
-    public GamePlayMenuView() {
+            + "\nQ - Quit");
     }
-
-    public void displayMenu() {
-
-        char selection = ' ';
-
-        do {
-            System.out.println(menu);
-
-            String input = getInput();
-            selection = input.charAt(0);
-
-            doAction(selection);
-
-        } while (selection != 'Q');
-    }
-
-    public void doAction(char selection) {
-
-        switch (selection) {
-
-            case 'V':
-                viewMap();
-                break;
-            case 'I':
-                lookForItems();
-                break;
-            case 'M':
-                moveToALocation();
-                break;
-            case 'S':
-                specialActionMenu();
-                break;
-            case 'C':
-                currentLocation();
-                break;
-            case 'Q':
-                break;
-            default:
-                System.out.println("Invalid option");
-                break;
-        }
-    }
-
-    public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
-        String input = null;
-        boolean isValid = false;
-
-        while (!isValid) {
-            System.out.println("Please select an option: ");
-            input = keyboard.nextLine();
-            input = input.trim();
-
-            if (input == null || input.length() == 0) {
-                System.out.println("Invalid input - please enter a valid character.");
-            } else {
-                isValid = true;
-            }
-        }
-
-        return input.toUpperCase();
-
+    @Override
+    public boolean doAction(String value) {
+        value = value.toUpperCase(); //converts all to upper case
+      
     }
 
     private void gamePlayMenu() {
         GamePlayMenuView gamePlayMenu = new GamePlayMenuView();
-        gamePlayMenu.displayMenu();
+        gamePlayMenu.display();
     }
 
     private void calBasketVolume() {
         CalBasketVolumeView calBasketVolume = new CalBasketVolumeView();
-        calBasketVolume.displayMenu();
+        calBasketVolume.display();
     }
 
     private void specialActionMenu() {

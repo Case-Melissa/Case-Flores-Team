@@ -13,72 +13,26 @@ import lehisjourney.LehisJourney;
  *
  * @author home
  */
-public class MainMenuView {
-
-    private final String menu = "\n"
-            + "\nN - New Game"
-            + "\n? - Help Menu"
-            + "\nQ - Quit";
+public class MainMenuView extends View {
 
     public MainMenuView() {
-
+        super("\n"
+                + "\n----------------------------------"
+                + "\n| Main Menu"
+                + "\n----------------------------------"
+                + "\nN - New Game"
+                + "\n? - Help Menu"
+                + "\nQ - Quit"
+                + "\n----------------------------------");
     }
+    @Override
+    public boolean doAction(String value) {
 
-    public void displayMenu() {
-
-        char selection = ' ';
-
-        do {
-            System.out.println(menu);
-
-            String input = getInput();
-            selection = input.charAt(0);
-
-            doAction(selection);
-
-        } while (selection != 'Q');
-    }
-
-    public void doAction(char selection) {
-
-        switch (selection) {
-            case 'N':
-                startNewGame();
-                break;
-            case '?':
-                helpMenu();
-                break;
-            case 'Q':
-                break;
-            default:
-                System.out.println("Invalid option");
-                break;
+        value = value.toUpperCase(); //convert to all upper case
         }
-
-    }
-
-    public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
-        String input = null;
-        boolean isValid = false;
-
-        while (!isValid) {
-            System.out.println("Please select an option: ");
-            input = keyboard.nextLine();
-            input = input.trim();
-
-            if (input == null || input.length() == 0) {
-                System.out.println("Invalid input - please enter a valid character.");
-            } else {
-                isValid = true;
-            }
-        }
-        return input.toUpperCase();
-    }
-
     private void helpMenu() {
         helpMenuView helpMenu = new helpMenuView();
-        helpMenu.displayMenu();
+        helpMenu.display();
     }
 
     private void startNewGame() {
@@ -86,6 +40,6 @@ public class MainMenuView {
 
 //        System.out.println("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
         GamePlayMenuView gpm = new GamePlayMenuView();
-        gpm.displayMenu();
+        gpm.display();
     }
 }
