@@ -12,13 +12,13 @@ import java.util.Objects;
  *
  * @author Sylvia
  */
-public class Location implements Serializable{
-    
+public class Location implements Serializable {
+
     // class instance variables
     // class instance variables
-    private String row;
+    private int row;
     private String description;
-    private String column;
+    private int column;
     private Item item;
     private Map map;
     private Character character;
@@ -27,27 +27,27 @@ public class Location implements Serializable{
     public Location() {
     }
 
-    public String getRow() {
+    public int getRow() {
         return row;
     }
 
-    public void setRow(String row) {
+    public void setRow(int row) {
         this.row = row;
     }
 
     public String getDescription() {
         return description;
     }
-
+    
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getColumn() {
+    public int getColumn() {
         return column;
     }
 
-    public void setColumn(String column) {
+    public void setColumn(int column) {
         this.column = column;
     }
 
@@ -134,5 +134,4 @@ public class Location implements Serializable{
         return Objects.equals(this.labansChallengeSceneType, other.labansChallengeSceneType);
     }
 
-    
 }

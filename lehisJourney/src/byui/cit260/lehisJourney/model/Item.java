@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author Sylvia
  */
 public class Item implements Serializable {
-    
+
     //Class instance variable
     private String name;
     private String description;
@@ -122,6 +122,5 @@ public class Item implements Serializable {
         }
         return true;
     }
-    
-    
+
 }

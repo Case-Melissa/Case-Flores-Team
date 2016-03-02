@@ -12,13 +12,14 @@ import java.io.Serializable;
  * @author home
  */
 public class Design implements Serializable {
-  
+
 // Class instance variable
     private double noOfItems;
     private double base;
     private double height;
     private double width;
     private Location location;
+
     public Design() {
     }
 
@@ -92,10 +93,5 @@ public class Design implements Serializable {
         }
         return Double.doubleToLongBits(this.width) == Double.doubleToLongBits(other.width);
     }
- 
-    
+
 }
-
-   
-
-   
