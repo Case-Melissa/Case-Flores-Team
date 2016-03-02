@@ -12,6 +12,7 @@ package byui.cit260.lehisJourney.model;
 public class Game {
 
     private Player player;
+    private Map map;
 
     public Game() {
     }
@@ -24,8 +25,11 @@ public class Game {
         this.player = player;
     }
 
-    public void SetPlayer(Player player) {
-        System.out.println("CALLED SET PLAYER - NOT IMPLEMENTED YET.");
+    public Map getMap() {
+        return map;
     }
 
+    public void setMap(Map map) {
+        this.map = map;
+    }
 }

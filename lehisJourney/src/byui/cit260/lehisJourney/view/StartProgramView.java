@@ -35,10 +35,10 @@ public class StartProgramView {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.displayMenu();
 
-        SaveMenuView saveMenu = new SaveMenuView();
-        saveMenu.displayMenu();
-
-        System.out.println("Name is " + player.getName());
+//        SaveMenuView saveMenu = new SaveMenuView();
+//        saveMenu.displayMenu();
+//
+//        System.out.println("Name is " + player.getName());
     }
 
     public String getPlayerName() {

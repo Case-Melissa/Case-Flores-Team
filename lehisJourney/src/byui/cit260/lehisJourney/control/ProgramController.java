@@ -6,6 +6,7 @@
 package byui.cit260.lehisJourney.control;
 
 import byui.cit260.lehisJourney.model.Game;
+import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
 import lehisjourney.LehisJourney;
 
@@ -28,7 +29,12 @@ public class ProgramController {
 
     public static void createNewGame(Player player) {
         Game g = new Game();
-        g.SetPlayer(player);
+        g.setPlayer(player);
+        
+        g.setMap(new Map());
+        
+        player.setLocation(g.getMap().getLocation(0, 0));
+        
         LehisJourney.setGame(g);
     }
 }

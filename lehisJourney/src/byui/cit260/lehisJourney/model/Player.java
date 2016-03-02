@@ -6,6 +6,8 @@
 package byui.cit260.lehisJourney.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -17,10 +19,12 @@ public class Player implements Serializable {
 
 //Class instance variables
     private String name;
-    private Item item;
+    private List<Item> items;
     private Character character;
+    private Location location;
 
     public Player() {
+        items = new ArrayList<>();
     }
 
     public String getName() {
@@ -31,6 +35,30 @@ public class Player implements Serializable {
         this.name = name;
     }
 
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+    
     @Override
     public String toString() {
         return "Player{" + "name=" + name + '}';
