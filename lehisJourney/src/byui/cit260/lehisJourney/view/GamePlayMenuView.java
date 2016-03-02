@@ -5,7 +5,9 @@
  */
 package byui.cit260.lehisJourney.view;
 
+import byui.cit260.lehisJourney.model.Location;
 import java.util.Scanner;
+import lehisjourney.LehisJourney;
 
 /**
  *
@@ -15,6 +17,7 @@ public class GamePlayMenuView {
 
     private final String menu = "\n"
             + "\nV - View map"
+            + "\nV - View current location"
             + "\nI - Look for items at current location"
             + "\nM - Move to a location"
             + "\nS - Special Action"
@@ -53,6 +56,9 @@ public class GamePlayMenuView {
                 break;
             case 'S':
                 specialActionMenu();
+                break;
+            case 'C':
+                currentLocation();
                 break;
             case 'Q':
                 break;
@@ -106,6 +112,12 @@ public class GamePlayMenuView {
     }
 
     private void viewMap() {
-        System.out.println("View the map.");
+        System.out.println(LehisJourney.getGame().getMap().getMapDisplay());
+    }
+    
+    private void currentLocation() {
+        Location loc = LehisJourney.getGame().getPlayer().getLocation();
+        System.out.println("You are at: " + loc.getRow() + ", " + loc.getColumn() + ".");
+        System.out.println("Which is a " + loc.getDescription());
     }
 }

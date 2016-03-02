@@ -84,11 +84,8 @@ public class MainMenuView {
     private void startNewGame() {
         ProgramController.createNewGame(LehisJourney.getPlayer());
 
-        System.out.println("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
-    }
-
-    private void gamePlayMenu() {
-        GamePlayMenuView gamePlayMenu = new GamePlayMenuView();
-        gamePlayMenu.displayMenu();
+//        System.out.println("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
+        GamePlayMenuView gpm = new GamePlayMenuView();
+        gpm.displayMenu();
     }
 }
