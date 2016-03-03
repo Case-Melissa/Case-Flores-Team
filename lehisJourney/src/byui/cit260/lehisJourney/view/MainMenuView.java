@@ -25,11 +25,30 @@ public class MainMenuView extends View {
                 + "\nQ - Quit"
                 + "\n----------------------------------");
     }
+
     @Override
     public boolean doAction(String value) {
 
-        value = value.toUpperCase(); //convert to all upper case
-        }
+        char selection = value.toUpperCase().charAt(0); //convert to all upper case
+       
+       switch (selection) {
+           case 'N':
+               startNewGame();
+               break;
+           case '?':
+               helpMenu();
+               break;
+           case 'Q':
+               return true;
+           default:
+               System.out.println("Invalid option");
+               break;
+       }
+       
+       return false;
+        
+    }
+
     private void helpMenu() {
         helpMenuView helpMenu = new helpMenuView();
         helpMenu.display();

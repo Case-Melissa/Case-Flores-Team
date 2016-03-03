@@ -13,28 +13,50 @@ import lehisjourney.LehisJourney;
  *
  * @author home
  */
-public class helpMenuView extends View{
-
+public class helpMenuView extends View {
 
     public helpMenuView() {
         super("\n"
-            + "\n-------------------------------"
-            + "\n| Help Menu"
-            + "\n-------------------------------"
-            + "\n? - Help"
-            + "\nK - Shortcut Keys"
-            + "\nF - FAQs"
-            + "\nH - Hints"
-            + "\nQ - Quit"
-            + "----------------------------------");
-    
-    @Override
-    public boolean doAction(String value){
-
-        value = value.toUpperCase(); //converts to all upper case
-    
+                + "\n-------------------------------"
+                + "\n| Help Menu"
+                + "\n-------------------------------"
+                + "\n? - Help"
+                + "\nK - Shortcut Keys"
+                + "\nF - FAQs"
+                + "\nH - Hints"
+                + "\nQ - Quit"
+                + "----------------------------------");
     }
-    private void helpMenu(){
+
+    @Override
+    public boolean doAction(String value) {
+
+        char selection = value.toUpperCase().charAt(0); //convert to all upper case
+
+        switch (selection) {
+            case '?':
+                help();
+                break;
+            case 'K':
+                shortcutKeys();
+                break;
+            case 'F':
+                frequentlyAskedQuestions();
+                break;
+            case 'H':
+                hints();
+                break;
+            case 'Q':
+                break;
+            default:
+                System.out.println("Invalid option");
+                break;
+        }
+        return false;
+
+    }
+
+    private void helpMenu() {
         helpMenuView helpMenu = new helpMenuView();
         helpMenu.display();
     }
@@ -55,4 +77,4 @@ public class helpMenuView extends View{
         System.out.println("Hints for Solving Challenges");
     }
 }
-}
+

@@ -30,7 +30,33 @@ public class SaveMenuView extends View {
 
     @Override
     public boolean doAction(String value) {
-        value = value.toUpperCase();
+
+        char selection = value.toUpperCase().charAt(0); //convert to all upper case
+
+        switch (selection) {
+
+            case 'L':
+                loadSavedGame();
+                break;
+            case 'D':
+                deleteSaveGame();
+                break;
+            case 'S':
+                saveCurrentGame();
+                break;
+            case 'R':
+                returnToGame();
+                break;
+            case 'W':
+                quitWithoutSaving();
+                break;
+            case 'Q':
+                break;
+            default:
+                System.out.println("Invalid option");
+                break;
+        }
+        return false;
     }
 
     private void loadSavedGame() {

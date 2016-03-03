@@ -27,9 +27,10 @@ public class CalBasketVolumeView extends View {
     }
 
     @Override
-    public void doAction(String value) {
+    public boolean doAction(String value) {
 
         value = value.toUpperCase();// converts to upper case
+    return true;
     }
 
     private void calBasketVolume() {

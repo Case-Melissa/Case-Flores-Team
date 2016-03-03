@@ -15,20 +15,43 @@ import lehisjourney.LehisJourney;
  */
 public class GamePlayMenuView extends View {
 
-   
     public GamePlayMenuView() {
         super("\n"
-            + "\nV - View map"
-            + "\nV - View current location"
-            + "\nI - Look for items at current location"
-            + "\nM - Move to a location"
-            + "\nS - Special Action"
-            + "\nQ - Quit");
+                + "\nV - View map"
+                + "\nV - View current location"
+                + "\nI - Look for items at current location"
+                + "\nM - Move to a location"
+                + "\nS - Special Action"
+                + "\nQ - Quit");
     }
+
     @Override
     public boolean doAction(String value) {
-        value = value.toUpperCase(); //converts all to upper case
-      
+        
+         char selection = value.toUpperCase().charAt(0); //convert to all upper case
+       
+        
+        switch (selection) {
+
+            case 'V':
+                viewMap();
+                break;
+            case 'I':
+                lookForItems();
+                break;
+            case 'M':
+                moveToALocation();
+                break;
+            case 'S':
+                specialActionMenu();
+                break;
+            case 'Q':
+                break;
+            default:
+                System.out.println("Invalid option");
+                break;
+        }
+        return false;
     }
 
     private void gamePlayMenu() {
@@ -56,7 +79,7 @@ public class GamePlayMenuView extends View {
     private void viewMap() {
         System.out.println(LehisJourney.getGame().getMap().getMapDisplay());
     }
-    
+
     private void currentLocation() {
         Location loc = LehisJourney.getGame().getPlayer().getLocation();
         System.out.println("You are at: " + loc.getRow() + ", " + loc.getColumn() + ".");

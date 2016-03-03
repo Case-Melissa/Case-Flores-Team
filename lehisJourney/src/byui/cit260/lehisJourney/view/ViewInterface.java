@@ -9,7 +9,7 @@ package byui.cit260.lehisJourney.view;
  *
  * @author Melissa Case
  */
-public class ViewInterface {
+public interface ViewInterface {
     
 public void display();
 public String getInput();

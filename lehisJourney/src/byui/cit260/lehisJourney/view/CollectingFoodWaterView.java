@@ -30,7 +30,31 @@ public class CollectingFoodWaterView extends View {
     @Override
     public boolean doAction(String value) {
 
-        value = value.toUpperCase(); // converts all to upper case
+        char selection = value.toUpperCase().charAt(0); //convert to all upper case
+
+        switch (selection) {
+            case 'B':
+                lookBerries();
+                break;
+            case 'H':
+                seekHoney();
+                break;
+            case 'E':
+                findWheat();
+                break;
+            case 'W':
+                searchWater();
+                break;
+            case 'U':
+                lookUnknownPlants();
+                break;
+            case 'Q':
+                break;
+            default:
+                System.out.println("Invalid option");
+                break;
+        }
+        return false;
     }
 
     private void CollectingFoodWater() {
