@@ -5,12 +5,18 @@
  */
 package byui.cit260.lehisJourney.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author home
  */
-public class Game {
+public class Game implements Serializable{
 
+    private double totalTime;
+    private long noPeople;
+    private Item[] item;
+    private Character character;
     private Player player;
     private Map map;
 
@@ -32,4 +38,36 @@ public class Game {
     public void setMap(Map map) {
         this.map = map;
     }
+     public double getTotalTime() {
+        return totalTime;
+    }
+
+    public void setTotalTime(double totalTime) {
+        this.totalTime = totalTime;
+    }
+
+    public long getNoPeople() {
+        return noPeople;
+    }   
+     
+    public void setNoPeople(long noPeople) {
+        this.noPeople = noPeople;
+    }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+
+    public Item[] getItem() {
+        return item;
+    }
+
+    public void setItem(Item[] item) {
+        this.item = item;
+    }
+    
 }

@@ -33,10 +33,10 @@ public class MainMenuView extends View {
        
        switch (selection) {
            case 'N':
-               startNewGame();
+              this.startNewGame();
                break;
            case '?':
-               helpMenu();
+               this.helpMenu();
                break;
            case 'Q':
                return true;

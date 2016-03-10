@@ -6,6 +6,7 @@
 package byui.cit260.lehisJourney.control;
 
 import byui.cit260.lehisJourney.model.Game;
+import byui.cit260.lehisJourney.model.Item;
 import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
 import lehisjourney.LehisJourney;
@@ -29,6 +30,7 @@ public class ProgramController {
 
     public static void createNewGame(Player player) {
         Game g = new Game();
+        LehisJourney.setGame(g);
         g.setPlayer(player);
         
         g.setMap(new Map());
@@ -37,4 +39,8 @@ public class ProgramController {
         
         LehisJourney.setGame(g);
     }
+    public static Item[] createItemList(){
+       System.out.println("*** called createItemList() in GameControl***");
+       return null;
+   }
 }
