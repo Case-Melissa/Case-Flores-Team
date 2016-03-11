@@ -6,6 +6,7 @@
 package byui.cit260.lehisJourney.control;
 
 import byui.cit260.lehisJourney.model.Game;
+import byui.cit260.lehisJourney.model.InventoryItem;
 import byui.cit260.lehisJourney.model.Item;
 import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
@@ -38,9 +39,21 @@ public class ProgramController {
         player.setLocation(g.getMap().getLocation(0, 0));
         
         LehisJourney.setGame(g);
+        
+        InventoryItem[] itemList = ProgramController.createItemList();
+        g.setInventory(itemList);
+   
+       Character[] character = ProgramController.createCharacter();
+       g.setCharacter(character);
     }
-    public static Item[] createItemList(){
-       System.out.println("*** called createItemList() in GameControl***");
-       return null;
-   }
+
+    private static InventoryItem[] createItemList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static Character[] createCharacter() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
+       
+

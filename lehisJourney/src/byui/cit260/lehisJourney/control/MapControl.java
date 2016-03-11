@@ -6,6 +6,7 @@
 package byui.cit260.lehisJourney.control;
 
 
+import byui.cit260.lehisJourney.model.Location;
 import byui.cit260.lehisJourney.model.Map;
 
 /**
@@ -16,10 +17,18 @@ public class MapControl {
     public static Map createMap(){
     Map map = new Map (20,20);
     
-    Scene[] scenes = createScenes();
+    Location[] location = createScenes();
 
-    assignScenesToLocations(map, scenes);
+    assignScenesToLocations(map, location);
     return map;
+    }
+
+    private static void assignScenesToLocations(Map map, Location[] location) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static Location[] createScenes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

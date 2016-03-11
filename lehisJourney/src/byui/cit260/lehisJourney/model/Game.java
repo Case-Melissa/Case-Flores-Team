@@ -69,5 +69,17 @@ public class Game implements Serializable{
     public void setItem(Item[] item) {
         this.item = item;
     }
+
+    public void setInventory(InventoryItem[] itemList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setCharacter(java.lang.Character character) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setCharacter(java.lang.Character[] character) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

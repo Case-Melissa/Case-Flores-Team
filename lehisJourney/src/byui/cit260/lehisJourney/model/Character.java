@@ -40,7 +40,7 @@ private final String description;
         return description;
     }
 
-    public Location getCoordinates() {
+    public Location getLocation() {
         return coordinates;
     }
 

@@ -12,41 +12,24 @@ import java.util.Objects;
  *
  * @author Sylvia
  */
-public enum Item implements Serializable {
-    //Class instance variable
-    OIL(2),
-    FLOUR(4),
-    CLOTHES(8),
-    TENTS(2),
-    STAKES(8),
-    BERRIES(16),
-    HONEY(2),
-    WHEAT(5),
-    WATER(16),
-    UNKNOWN_PLANTS(5),
-    GOAT_SKIN(1),
-    CAMEL_SKIN(1),
-    GOAT_HAIR(1),
-    CAMEL_HAIR(1);
+public class Item implements Serializable{
 
-    private final int description;
+    //Class instance variable  
+
+    private final String description;
     private final Location coordinates;
+   
 
-
-    Item(int description) {
+    Item(String description) {
         this.description = description;
-        coordinates = new Location(0,0);
+        coordinates = new Location(0, 0);
     }
 
-    public int getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    /**
-     *
-     * @return
-     */
-    public Location getCoordinates() {
+    public Location getLocation() {
         return coordinates;
     }
 }

@@ -37,7 +37,8 @@ public class Map {
                 l.setDescription(LocationType.values()[locationTypeIndex].toString());
                 matrix[row][col] = l;
             }
-        }
+       }
+        
     }
 
     public Location getLocation(int row, int col) {
