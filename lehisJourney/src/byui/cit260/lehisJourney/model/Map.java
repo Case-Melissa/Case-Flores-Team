@@ -5,7 +5,6 @@
  */
 package byui.cit260.lehisJourney.model;
 
-
 /**
  *
  * @author Melissa Case
@@ -25,7 +24,7 @@ public class Map {
     public Map(int i, int i0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     public void init() {
 
         for (int row = 0; row < NUM_ROWS; row++) {
@@ -37,8 +36,8 @@ public class Map {
                 l.setDescription(LocationType.values()[locationTypeIndex].toString());
                 matrix[row][col] = l;
             }
-       }
-        
+        }
+
     }
 
     public Location getLocation(int row, int col) {
@@ -57,5 +56,5 @@ public class Map {
 
         return rtn;
     }
-    
+
 }

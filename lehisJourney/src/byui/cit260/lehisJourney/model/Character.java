@@ -21,21 +21,19 @@ public enum Character implements Serializable {
 
     private double lifeLevel;
 
-private final String description;
-    
-   
-  
+    private final String description;
+
     private final Location coordinates;
 
     Character(String description) {
         this.description = description;
-        coordinates = new Location(1,1);
+        coordinates = new Location(1, 1);
     }
 
     public double getLifeLevel() {
         return lifeLevel;
     }
-    
+
     public String getDescription() {
         return description;
     }

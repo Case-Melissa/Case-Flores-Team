@@ -33,18 +33,18 @@ public class ProgramController {
         Game g = new Game();
         LehisJourney.setGame(g);
         g.setPlayer(player);
-        
+
         g.setMap(new Map());
-        
+
         player.setLocation(g.getMap().getLocation(0, 0));
-        
+
         LehisJourney.setGame(g);
-        
+
         InventoryItem[] itemList = ProgramController.createItemList();
         g.setInventory(itemList);
-   
-       Character[] character = ProgramController.createCharacter();
-       g.setCharacter(character);
+
+        Character[] character = ProgramController.createCharacter();
+        g.setCharacter(character);
     }
 
     private static InventoryItem[] createItemList() {
@@ -55,5 +55,3 @@ public class ProgramController {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
-       
-

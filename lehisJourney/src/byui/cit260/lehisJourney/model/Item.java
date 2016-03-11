@@ -12,13 +12,11 @@ import java.util.Objects;
  *
  * @author Sylvia
  */
-public class Item implements Serializable{
+public class Item implements Serializable {
 
     //Class instance variable  
-
     private final String description;
     private final Location coordinates;
-   
 
     Item(String description) {
         this.description = description;

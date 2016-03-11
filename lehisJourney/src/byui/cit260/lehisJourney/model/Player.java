@@ -58,7 +58,7 @@ public class Player implements Serializable {
     public void setLocation(Location location) {
         this.location = location;
     }
-    
+
     @Override
     public String toString() {
         return "Player{" + "name=" + name + '}';

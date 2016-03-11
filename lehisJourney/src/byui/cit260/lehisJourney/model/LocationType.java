@@ -14,6 +14,5 @@ public enum LocationType {
     Tent,
     River,
     Jerusalem,
-    
-    
+
 }

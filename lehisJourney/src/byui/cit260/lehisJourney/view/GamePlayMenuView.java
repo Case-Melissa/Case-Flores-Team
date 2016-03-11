@@ -27,10 +27,9 @@ public class GamePlayMenuView extends View {
 
     @Override
     public boolean doAction(String value) {
-        
-         char selection = value.toUpperCase().charAt(0); //convert to all upper case
-       
-        
+
+        char selection = value.toUpperCase().charAt(0); //convert to all upper case
+
         switch (selection) {
 
             case 'V':

@@ -10,10 +10,11 @@ package byui.cit260.lehisJourney.view;
  * @author Melissa Case
  */
 public interface ViewInterface {
-    
-public void display();
-public String getInput();
-public boolean doAction(String value);
+
+    public void display();
+
+    public String getInput();
+
+    public boolean doAction(String value);
 
 }
-

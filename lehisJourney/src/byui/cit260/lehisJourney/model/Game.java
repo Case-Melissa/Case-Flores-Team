@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author home
  */
-public class Game implements Serializable{
+public class Game implements Serializable {
 
     private double totalTime;
     private long noPeople;
@@ -38,7 +38,8 @@ public class Game implements Serializable{
     public void setMap(Map map) {
         this.map = map;
     }
-     public double getTotalTime() {
+
+    public double getTotalTime() {
         return totalTime;
     }
 
@@ -48,8 +49,8 @@ public class Game implements Serializable{
 
     public long getNoPeople() {
         return noPeople;
-    }   
-     
+    }
+
     public void setNoPeople(long noPeople) {
         this.noPeople = noPeople;
     }
@@ -81,5 +82,5 @@ public class Game implements Serializable{
     public void setCharacter(java.lang.Character[] character) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
