@@ -49,7 +49,7 @@ public class LehisJourney {
         LehisJourney.game = game;
     }
 
-    Item itemOne = new Item();
+    Item item = new Item();
 
     Map mapOne = new Map();
 

@@ -25,6 +25,10 @@ public class Item implements Serializable{
         coordinates = new Location(0, 0);
     }
 
+    public Item() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getDescription() {
         return description;
     }
