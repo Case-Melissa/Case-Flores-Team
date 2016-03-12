@@ -5,6 +5,7 @@
  */
 package byui.cit260.lehisJourney.view;
 
+import byui.cit260.lehisJourney.control.MovementController;
 import byui.cit260.lehisJourney.model.Location;
 import java.util.Scanner;
 import lehisjourney.LehisJourney;
@@ -27,10 +28,9 @@ public class GamePlayMenuView extends View {
 
     @Override
     public boolean doAction(String value) {
-        
-         char selection = value.toUpperCase().charAt(0); //convert to all upper case
-       
-        
+
+        char selection = value.toUpperCase().charAt(0); //convert to all upper case
+
         switch (selection) {
 
             case 'V':
@@ -71,6 +71,35 @@ public class GamePlayMenuView extends View {
     private void moveToALocation() {
         System.out.println("Move to a new location.");
     }
+
+    private void moveNorth() {
+        MovementController mc = new MovementController();
+        if(!mc.moveNorth(LehisJourney.getGame())) {
+            System.out.println("You cannot move there.");
+        }
+    }
+
+    private void moveEast() {
+        MovementController mc = new MovementController();
+        if(mc.moveEast(LehisJourney.getGame()) == false) {
+            System.out.println("You cannot move there.");
+        }
+    }
+
+    private void moveSouth() {
+        MovementController mc = new MovementController();
+        if(mc.moveSouth(LehisJourney.getGame()) == false) {
+            System.out.println("You cannot move there.");
+        }
+    }
+
+    private void moveWest() {
+        MovementController mc = new MovementController();
+        if(mc.moveWest(LehisJourney.getGame()) == false) {
+            System.out.println("You cannot move there.");
+        }
+    }
+    
 
     private void lookForItems() {
         System.out.println("Look for an item in current location.");

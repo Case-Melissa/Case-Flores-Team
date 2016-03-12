@@ -34,7 +34,7 @@ private final String description;
 
     public double getLifeLevel() {
         return lifeLevel;
-    }
+    } 
     
     public String getDescription() {
         return description;

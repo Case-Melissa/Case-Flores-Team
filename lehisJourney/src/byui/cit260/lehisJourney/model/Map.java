@@ -56,5 +56,10 @@ public class Map {
 
         return rtn;
     }
-    
+    public int getRows() {
+        return NUM_ROWS;
+    }
+     public int getCols() {
+        return NUM_COLS;
+    }
 }
