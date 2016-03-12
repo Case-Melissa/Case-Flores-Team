@@ -77,4 +77,3 @@ public class helpMenuView extends View {
         System.out.println("Hints for Solving Challenges");
     }
 }
-

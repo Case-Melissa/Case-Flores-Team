@@ -12,31 +12,19 @@ import java.util.Objects;
  *
  * @author Sylvia
  */
-public enum Item {
+public class Item implements Serializable {
 
-    //Class instance variable
-    oil,
-    flour,
-    clothes,
-    tents,
-    stakes,
-    berries,
-    honey,
-    wheat,
-    water,
-    unknown_plants,
-    goat_skin,
-    camel_skin,
-    goat_hair,
-    camel_hair;
-
+    //Class instance variable  
     private final String description;
     private final Location coordinates;
-   
 
     Item(String description) {
         this.description = description;
         coordinates = new Location(0, 0);
+    }
+
+    public Item() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getDescription() {

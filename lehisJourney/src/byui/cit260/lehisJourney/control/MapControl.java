@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,6 +8,7 @@ package byui.cit260.lehisJourney.control;
 
 
 import byui.cit260.lehisJourney.model.Map;
+import javafx.scene.Scene;
 
 /**
  *

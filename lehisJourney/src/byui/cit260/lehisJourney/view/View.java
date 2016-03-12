@@ -30,8 +30,9 @@ public abstract class View implements ViewInterface {
             // promt for and get players name
             String value = this.getInput();
             if (value.toUpperCase().equals("Q"))//user wants to quit
+            {
                 return; //exit the view
-       
+            }
             // do the requested action amd display the next view
             done = this.doAction(value);
 
@@ -61,6 +62,6 @@ public abstract class View implements ViewInterface {
             }
             break;
         }
-       return value; //return the name
+        return value; //return the name
     }
 }

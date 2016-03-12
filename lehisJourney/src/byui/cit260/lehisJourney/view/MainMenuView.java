@@ -30,23 +30,23 @@ public class MainMenuView extends View {
     public boolean doAction(String value) {
 
         char selection = value.toUpperCase().charAt(0); //convert to all upper case
-       
-       switch (selection) {
-           case 'N':
-              this.startNewGame();
-               break;
-           case '?':
-               this.helpMenu();
-               break;
-           case 'Q':
-               return true;
-           default:
-               System.out.println("Invalid option");
-               break;
-       }
-       
-       return false;
-        
+
+        switch (selection) {
+            case 'N':
+                this.startNewGame();
+                break;
+            case '?':
+                this.helpMenu();
+                break;
+            case 'Q':
+                return true;
+            default:
+                System.out.println("Invalid option");
+                break;
+        }
+
+        return false;
+
     }
 
     private void helpMenu() {
