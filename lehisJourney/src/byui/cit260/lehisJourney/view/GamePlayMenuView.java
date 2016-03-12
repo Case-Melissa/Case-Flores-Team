@@ -19,10 +19,14 @@ public class GamePlayMenuView extends View {
     public GamePlayMenuView() {
         super("\n"
                 + "\nV - View map"
-                + "\nV - View current location"
+                + "\nC - View current location"
+                + "\nN - Move North"
+                + "\nS - Move South"
+                + "\nE - Move East"
+                + "\nW - Move West"
                 + "\nI - Look for items at current location"
-                + "\nM - Move to a location"
-                + "\nS - Special Action"
+                + "\nO - Move to a location"
+                + "\nA - Special Action"
                 + "\nQ - Quit");
     }
 
@@ -36,13 +40,28 @@ public class GamePlayMenuView extends View {
             case 'V':
                 viewMap();
                 break;
+            case 'C':
+                currentLocation();
+                break;
+            case 'N':
+                moveNorth();
+                break;
+            case 'S':
+                moveSouth();
+                break;
+            case 'E':
+                moveEast();
+                break;
+            case 'W':
+                moveWest();
+                break;
             case 'I':
                 lookForItems();
                 break;
             case 'M':
                 moveToALocation();
                 break;
-            case 'S':
+            case 'A':
                 specialActionMenu();
                 break;
             case 'Q':
@@ -100,7 +119,6 @@ public class GamePlayMenuView extends View {
         }
     }
     
-
     private void lookForItems() {
         System.out.println("Look for an item in current location.");
     }
@@ -114,4 +132,6 @@ public class GamePlayMenuView extends View {
         System.out.println("You are at: " + loc.getRow() + ", " + loc.getColumn() + ".");
         System.out.println("Which is a " + loc.getDescription());
     }
+
+   
 }
