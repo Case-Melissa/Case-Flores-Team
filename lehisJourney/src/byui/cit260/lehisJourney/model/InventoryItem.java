@@ -103,15 +103,15 @@ public class InventoryItem {
         return inventory;
     }
 
-    private void setDescription(String oil) {
+    public void setDescription(String oil) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void setQuantityInStock(int i) {
+    public void setQuantityInStock(int i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void setRequiredAmount(int i) {
+    public void setRequiredAmount(int i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
