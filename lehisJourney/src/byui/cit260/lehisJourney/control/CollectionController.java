@@ -5,10 +5,7 @@
  */
 package byui.cit260.lehisJourney.control;
 
-import static byui.cit260.lehisJourney.control.CollectionController.collection;
-import byui.cit260.lehisJourney.model.InventoryItem;
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  *
