@@ -16,7 +16,7 @@ import javafx.scene.Scene;
  */
 public class MapControl {
     public static Map createMap(){
-    Map map = new Map (20,20);
+    Map map = new Map (6 ,6);
     
     Scene[] scenes = createScenes();
 
