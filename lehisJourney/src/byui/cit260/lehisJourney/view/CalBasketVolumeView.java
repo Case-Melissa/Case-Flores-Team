@@ -6,6 +6,7 @@
 package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.control.ItemControl;
+import static byui.cit260.lehisJourney.model.InventoryItem.createItemList;
 import java.util.Scanner;
 
 /**
@@ -37,5 +38,6 @@ public class CalBasketVolumeView extends View {
         CalBasketVolumeView calBasketVolume = new CalBasketVolumeView();
         calBasketVolume.display();
     }
-
+   
+    
 }

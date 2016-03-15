@@ -39,12 +39,6 @@ public class ProgramController {
         player.setLocation(g.getMap().getLocation(0, 0));
 
         LehisJourney.setGame(g);
-
-        InventoryItem[] itemList = ProgramController.createItemList();
-        g.setInventory(itemList);
-
-        Character[] character = ProgramController.createCharacter();
-        g.setCharacter(character);
     }
 
     private static InventoryItem[] createItemList() {
