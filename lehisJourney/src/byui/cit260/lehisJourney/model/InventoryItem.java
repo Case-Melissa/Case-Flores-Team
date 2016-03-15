@@ -11,10 +11,14 @@ package byui.cit260.lehisJourney.model;
  */
 public class InventoryItem {
 
+    String description;
+    int quantityInStock;
+    int requiredAmount;
+    
     public static InventoryItem[] createItemList() {
         //Create and array of inventory items
         InventoryItem[] inventory
-                = new InventoryItem[13];
+                = new InventoryItem[14];
 
         InventoryItem oil = new InventoryItem();
         oil.setDescription("Oil");
@@ -104,14 +108,17 @@ public class InventoryItem {
     }
 
     private void setDescription(String oil) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        description = oil;
     }
 
     private void setQuantityInStock(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        quantityInStock = i;
     }
 
     private void setRequiredAmount(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        requiredAmount = i;
     }
 }

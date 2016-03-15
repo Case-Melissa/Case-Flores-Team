@@ -48,10 +48,13 @@ public class ProgramController {
     }
 
     private static InventoryItem[] createItemList() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return InventoryItem.createItemList();
+               
     }
 
     private static Character[] createCharacter() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // return Character.
     }
 }
