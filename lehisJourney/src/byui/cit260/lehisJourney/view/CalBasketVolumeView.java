@@ -6,7 +6,7 @@
 package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.model.Design;
-import static byui.cit260.lehisJourney.model.InventoryItem.get;
+
 
 /**
  *
