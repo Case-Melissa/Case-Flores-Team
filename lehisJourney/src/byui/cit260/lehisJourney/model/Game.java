@@ -16,6 +16,7 @@ public class Game implements Serializable {
     private double totalTime;
     private long noPeople;
     private Item[] item;
+    private InventoryItem[] createItemList;
     private Character character;
     private Player player;
     private Map map;
@@ -72,14 +73,5 @@ public class Game implements Serializable {
         this.item = item;
     }
 
-    public void setInventory(InventoryItem[] itemList) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        inventory = itemList;
-    }
 
-    public void setCharacter(java.lang.Character[] character) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-  
 }
