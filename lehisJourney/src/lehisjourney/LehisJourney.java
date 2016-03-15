@@ -49,8 +49,6 @@ public class LehisJourney {
         LehisJourney.game = game;
     }
 
-    Item item = new Item();
-
     Map mapOne = new Map();
 
     Design basketOne = new Design();
