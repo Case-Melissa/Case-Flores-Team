@@ -73,5 +73,16 @@ public class Game implements Serializable {
         this.item = item;
     }
 
+    public Game(InventoryItem[] createItemList) {
+        this.createItemList = createItemList;
+    }
+
+    public InventoryItem[] getCreateItemList() {
+        return createItemList;
+    }
+
+    public void setCreateItemList(InventoryItem[] createItemList) {
+        this.createItemList = createItemList;
+    }
 
 }

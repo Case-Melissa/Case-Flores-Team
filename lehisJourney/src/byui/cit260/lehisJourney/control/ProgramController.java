@@ -37,6 +37,7 @@ public class ProgramController {
         g.setMap(new Map());
 
         player.setLocation(g.getMap().getLocation(0, 0));
+        
 
         LehisJourney.setGame(g);
     }
