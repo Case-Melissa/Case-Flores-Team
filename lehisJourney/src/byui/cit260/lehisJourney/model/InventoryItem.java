@@ -103,7 +103,11 @@ public class InventoryItem {
         return inventory;
     }
 
-    public void setDescription(String oil) {
+    public static void get(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setDescription(String i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
