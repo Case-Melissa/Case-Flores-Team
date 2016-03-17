@@ -31,6 +31,8 @@ public class MovementController {
         int newRow = currentRow - 1;
 
         Location newLocation = map.getLocation(newRow, currentCol);
+        
+        player.setLocation(newLocation);
 
         return true;
     }
