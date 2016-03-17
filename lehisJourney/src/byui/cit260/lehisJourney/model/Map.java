@@ -21,10 +21,6 @@ public class Map {
         matrix = new Location[NUM_ROWS][NUM_COLS];
         init();
     }
-
-    public Map(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     public void init() {
 
@@ -33,8 +29,10 @@ public class Map {
                 Location l = new Location();
                 l.setRow(row);
                 l.setColumn(col);
+                int itemIndex =(int) (Math.random() * Item.values().length);
                 int locationTypeIndex = (int) (Math.random() * LocationType.values().length);
                 l.setDescription(LocationType.values()[locationTypeIndex].toString());
+                l.setItem(Item.values()[itemIndex]);
                 matrix[row][col] = l;
             }
         }

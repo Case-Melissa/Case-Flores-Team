@@ -37,21 +37,19 @@ public class ProgramController {
         g.setMap(new Map());
 
         player.setLocation(g.getMap().getLocation(0, 0));
+        
 
         LehisJourney.setGame(g);
-
-        InventoryItem[] itemList = ProgramController.createItemList();
-        g.setInventory(itemList);
-
-        Character[] character = ProgramController.createCharacter();
-        g.setCharacter(character);
     }
 
     private static InventoryItem[] createItemList() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return InventoryItem.createItemList();
+               
     }
 
     private static Character[] createCharacter() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // return Character.
     }
 }

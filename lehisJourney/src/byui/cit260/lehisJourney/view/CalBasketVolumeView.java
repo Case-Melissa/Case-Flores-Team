@@ -5,8 +5,8 @@
  */
 package byui.cit260.lehisJourney.view;
 
-import byui.cit260.lehisJourney.control.ItemControl;
-import java.util.Scanner;
+import byui.cit260.lehisJourney.model.Design;
+
 
 /**
  *
@@ -38,4 +38,18 @@ public class CalBasketVolumeView extends View {
         calBasketVolume.display();
     }
 
+    public double getHeight(Design design) {
+        double height = design.getHeight();
+        return height;
+    }
+
+    public double getLength(Design design) {
+        double length = design.getBase();
+        return length;
+    }
+
+    public double getWidth(Design design) {
+        double width = design.getWidth();
+        return width;
+    }
 }
