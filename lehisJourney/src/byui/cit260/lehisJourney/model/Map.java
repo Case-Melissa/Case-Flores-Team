@@ -29,9 +29,10 @@ public class Map {
                 Location l = new Location();
                 l.setRow(row);
                 l.setColumn(col);
-                int ItemIndex =(int) (Math.random() * Item.values().length);
+                int itemIndex =(int) (Math.random() * Item.values().length);
                 int locationTypeIndex = (int) (Math.random() * LocationType.values().length);
                 l.setDescription(LocationType.values()[locationTypeIndex].toString());
+                l.setItem(Item.values()[itemIndex]);
                 matrix[row][col] = l;
             }
         }
