@@ -6,8 +6,11 @@
 package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.control.MovementController;
+import byui.cit260.lehisJourney.exceptions.MapControlException;
 import byui.cit260.lehisJourney.model.Location;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import lehisjourney.LehisJourney;
 
 /**
@@ -44,16 +47,40 @@ public class GamePlayMenuView extends View {
                 currentLocation();
                 break;
             case 'N':
+        {
+            try {
                 moveNorth();
+            } catch (MapControlException ex) {
+                Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
                 break;
             case 'S':
+        {
+            try {
                 moveSouth();
+            } catch (MapControlException ex) {
+                Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
                 break;
             case 'E':
+        {
+            try {
                 moveEast();
+            } catch (MapControlException ex) {
+                Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
                 break;
             case 'W':
+        {
+            try {
                 moveWest();
+            } catch (MapControlException ex) {
+                Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
                 break;
             case 'I':
                 lookForItems();
@@ -91,28 +118,28 @@ public class GamePlayMenuView extends View {
         System.out.println("Move to a new location.");
     }
 
-    private void moveNorth() {
+    private void moveNorth() throws MapControlException {
         MovementController mc = new MovementController();
         if(!mc.moveNorth(LehisJourney.getGame())) {
             System.out.println("You cannot move there.");
         }
     }
 
-    private void moveEast() {
+    private void moveEast() throws MapControlException {
         MovementController mc = new MovementController();
         if(mc.moveEast(LehisJourney.getGame()) == false) {
             System.out.println("You cannot move there.");
         }
     }
 
-    private void moveSouth() {
+    private void moveSouth() throws MapControlException {
         MovementController mc = new MovementController();
         if(mc.moveSouth(LehisJourney.getGame()) == false) {
             System.out.println("You cannot move there.");
         }
     }
 
-    private void moveWest() {
+    private void moveWest() throws MapControlException {
         MovementController mc = new MovementController();
         if(mc.moveWest(LehisJourney.getGame()) == false) {
             System.out.println("You cannot move there.");
