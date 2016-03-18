@@ -36,11 +36,7 @@ public class MapControl {
         }
     }
 
-    static int moveCharacterToLocation(byui.cit260.lehisJourney.model.Character character, Point coordinates) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    static int moveCharacterToLocation(byui.cit260.lehisJourney.model.Character character, Location coordinates) {
+    static int moveCharacterToLocation(byui.cit260.lehisJourney.model.Character character, Location location) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
