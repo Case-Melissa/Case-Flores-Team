@@ -43,6 +43,7 @@ public class GamePlayMenuView extends View {
             case 'V':
                 viewMap();
                 break;
+                
             case 'C':
                 currentLocation();
                 break;

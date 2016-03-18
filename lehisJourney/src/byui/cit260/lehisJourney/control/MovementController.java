@@ -22,14 +22,8 @@ public class MovementController {
         Player player = game.getPlayer();
         Location currentLocation = player.getLocation();
         Map map = game.getMap();
-
-        if (currentLocation.getRow() == 0) {
-            throw new MapControlException("Cannot move character to this location "
-                                        + location.x + ", " + location.y "because that location is outside "
-                                        + "the bounds of the map.");
-        }
         
-
+        
         int currentCol = currentLocation.getColumn();
         int currentRow = currentLocation.getRow();
         int newRow = currentRow - 1;

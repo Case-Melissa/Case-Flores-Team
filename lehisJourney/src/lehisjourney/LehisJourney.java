@@ -22,6 +22,9 @@ public class LehisJourney {
 
     private static Player player;
     private static Game game;
+    private static Map mapOne = new Map();
+    private static Design basketOne = new Design();
+    private static Tent tentOne = new Tent();
 
     /**
      * @param args the command line arguments
@@ -29,8 +32,14 @@ public class LehisJourney {
     public static void main(String[] args) {
 
         StartProgramView startView = new StartProgramView();
+        try{
         startView.startProgram();
-
+        }
+        catch (Throwable te) {
+           System.out.println(te.getMessage());
+                   te.printStackTrace();
+                           startView.displayBanner();
+        }
     }
 
     public static Player getPlayer() {
@@ -49,9 +58,33 @@ public class LehisJourney {
         LehisJourney.game = game;
     }
 
-    Map mapOne = new Map();
+    public static Game getCurrentGame() {
+        return game;
+    }
 
-    Design basketOne = new Design();
+    public static Map getMapOne() {
+        return mapOne;
+    }
 
-    Tent tentOne = new Tent();
+    public static void setMapOne(Map mapOne) {
+        LehisJourney.mapOne = mapOne;
+    }
+
+    public static Design getBasketOne() {
+        return basketOne;
+    }
+
+    public static void setBasketOne(Design basketOne) {
+        LehisJourney.basketOne = basketOne;
+    }
+
+    public static Tent getTentOne() {
+        return tentOne;
+    }
+
+    public static void setTentOne(Tent tentOne) {
+        LehisJourney.tentOne = tentOne;
+    }
+
+    
 }

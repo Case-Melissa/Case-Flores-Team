@@ -7,7 +7,6 @@
 package byui.cit260.lehisJourney.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
@@ -26,7 +25,7 @@ private final String description;
     
    
   
-    private final Location coordinates;
+ private final Location coordinates;
 
     Character(String description) {
         this.description = description;

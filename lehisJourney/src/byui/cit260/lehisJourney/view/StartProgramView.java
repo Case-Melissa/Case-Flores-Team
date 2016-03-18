@@ -61,7 +61,7 @@ public class StartProgramView {
         }
         return name;
     }
-
+    
     public void displayBanner() {
         String welcome = " ";
         welcome

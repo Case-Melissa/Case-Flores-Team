@@ -21,6 +21,10 @@ public class Map {
         matrix = new Location[NUM_ROWS][NUM_COLS];
         init();
     }
+
+    public Map(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public void init() {
 
