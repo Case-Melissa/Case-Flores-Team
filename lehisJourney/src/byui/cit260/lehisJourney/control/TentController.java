@@ -5,6 +5,9 @@
  */
 package byui.cit260.lehisJourney.control;
 
+import byui.cit260.lehisJourney.exceptions.TentControlException;
+import byui.cit260.lehisJourney.model.Item;
+import byui.cit260.lehisJourney.model.Tent;
 import java.util.ArrayList;
 import java.util.Collections;
 /**
@@ -28,5 +31,16 @@ public class TentController {
             System.out.println(str);
         }
       
+    }
+    public static void collectTentItems(Tent tent, Item item) throws TentControlException {
+        int newItem = (int) tent.getItems();
+
+        if (newItem < 0) {
+            throw new TentControlException("You have collected too much. Reduce your load");
+        }
+    }
+
+    public static void collectTentItems(Item item, Item item0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

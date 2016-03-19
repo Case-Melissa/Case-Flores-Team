@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package byui.cit260.lehisJourney.view;
+import byui.cit260.lehisJourney.control.TentController;
+import byui.cit260.lehisJourney.exceptions.TentControlException;
+import byui.cit260.lehisJourney.model.Item;
+import static byui.cit260.lehisJourney.model.Item.tent;
 import java.util.Scanner;
 /**
  *
@@ -30,9 +34,10 @@ public class CollectTentItemsView extends View {
 
     @Override
     public boolean doAction(String value) {
-
+        
         char selection = value.toUpperCase().charAt(0); //convert to all upper case
-
+        TentController.collectTentItems(tent, Item.tent);
+        
         switch (selection) {
             case 'O':
                 findOil();

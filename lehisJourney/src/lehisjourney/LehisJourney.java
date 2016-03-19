@@ -5,10 +5,8 @@
  */
 package lehisjourney;
 
-import byui.cit260.lehisJourney.model.Character;
 import byui.cit260.lehisJourney.model.Design;
 import byui.cit260.lehisJourney.model.Game;
-import byui.cit260.lehisJourney.model.Item;
 import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
 import byui.cit260.lehisJourney.model.Tent;
