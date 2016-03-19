@@ -22,5 +22,9 @@ package byui.cit260.lehisJourney.model;
       water,
       unknown_plants,
       clothes,
-      berries,
+      berries,;
+
+    public Object toUpperCase() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
