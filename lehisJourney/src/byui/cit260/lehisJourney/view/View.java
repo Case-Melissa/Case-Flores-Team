@@ -5,7 +5,10 @@
  */
 package byui.cit260.lehisJourney.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import lehisjourney.LehisJourney;
 
 /**
  *
@@ -15,6 +18,9 @@ public abstract class View implements ViewInterface {
 
     protected String displayMessage;
 
+    protected final BufferedReader keyboard = LehisJourney.getInFile();
+    protected final PrintWriter console = LehisJourney.getOutFile();
+    
     public View() {
     }
 
