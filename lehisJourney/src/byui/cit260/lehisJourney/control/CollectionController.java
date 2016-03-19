@@ -6,6 +6,7 @@
  */
 package byui.cit260.lehisJourney.control;
 
+import byui.cit260.lehisJourney.exceptions.CollectionControllerException;
 import java.util.ArrayList;
 
 /**
@@ -15,19 +16,37 @@ import java.util.ArrayList;
 public class CollectionController {
 
     public static boolean list;
-    
-    public static void collection(String a[]){       
-        ArrayList<String> design = new ArrayList<>();
-     design.add("goat hair");
-     design.add("camel hair");
-     design.add("goat skin");
-     design.add("camel skin");
-    
-     for (String collection : design)
-{
-    int i = design.indexOf(design);
-    System.out.println("The items needed to design a basket are: " + design );
-}
+    private static ArrayList<String> design = new ArrayList<>();
+
+    public static void collection(String a[]) {
+
+        design.add("goat hair");
+        design.add("camel hair");
+        design.add("goat skin");
+        design.add("camel skin");
+
+        for (String collection : design) {
+            int i = design.indexOf(design);
+            System.out.println("The items needed to design a basket are: " + design);
+        }
+    }
+
+    public static void compareList(String userInput)
+            throws CollectionControllerException {
+
+        boolean isFound = false;
+        for (String basket : design) {
+
+            if (basket == userInput) {
+
+                isFound = true;
+            }
+        }
+        if (isFound == false) {
+            throw new CollectionControllerException("You cannot make the basket yet,"
+                    + "because "+ design + "is not the right choice");
+        }
+
     }
 
     public static boolean isList() {
@@ -38,6 +57,4 @@ public class CollectionController {
         CollectionController.list = list;
     }
 
-    
-    
 }
