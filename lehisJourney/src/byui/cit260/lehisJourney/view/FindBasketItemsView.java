@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package byui.cit260.lehisJourney.view;
+import byui.cit260.lehisJourney.control.CollectionController;
+import byui.cit260.lehisJourney.model.Item;
 import java.util.Scanner;
 /**
  *
@@ -28,6 +30,7 @@ public class FindBasketItemsView extends View{
     public boolean doAction(String value) {
 
         char selection = value.toUpperCase().charAt(0); //convert to all upper case
+        //CollectionController.findBasketItems(basket, Item.basket);
 
         switch (selection) {
             case 'G':

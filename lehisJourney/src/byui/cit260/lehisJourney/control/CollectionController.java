@@ -18,17 +18,19 @@ public class CollectionController {
     public static boolean list;
     private static ArrayList<String> design = new ArrayList<>();
 
-    public static void collection(String a[]) {
+    public static ArrayList<String> collection(String a[]) throws CollectionControllerException {
 
         design.add("goat hair");
         design.add("camel hair");
         design.add("goat skin");
         design.add("camel skin");
 
-        for (String collection : design) {
-            int i = design.indexOf(design);
-            System.out.println("The items needed to design a basket are: " + design);
-        }
+        //for (String collection : design) {
+          //  int i = design.indexOf(design);
+            //System.out.println("The items needed to design a basket are: " + design);
+           // throw new CollectionControllerException("The items needed to design a basket are:" + design);
+       // }
+       return design;
     }
 
     public static void compareList(String userInput)
