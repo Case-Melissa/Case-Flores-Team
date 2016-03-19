@@ -5,7 +5,6 @@
  */
 package byui.cit260.lehisJourney.view;
 import byui.cit260.lehisJourney.control.TentController;
-import byui.cit260.lehisJourney.exceptions.TentControlException;
 import byui.cit260.lehisJourney.model.Item;
 import static byui.cit260.lehisJourney.model.Item.tent;
 import java.util.Scanner;
@@ -33,10 +32,13 @@ public class CollectTentItemsView extends View {
     }
 
     @Override
-    public boolean doAction(String value) {
+    public boolean doAction(String choice) {
+        Item item = null;
         
-        char selection = value.toUpperCase().charAt(0); //convert to all upper case
+        
+        int returnItem = TentController.collectTentItems(item); //convert to all upper case
         TentController.collectTentItems(tent, Item.tent);
+        int selection = 0;
         
         switch (selection) {
             case 'O':
