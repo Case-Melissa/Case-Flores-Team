@@ -42,7 +42,7 @@ public int getUserHeight(){
          try{
              height = Integer.parseInt(input);
          } catch (NumberFormatException nf){
-             System.out.println("Please eanter a number "
+             System.out.println("Please enter a number "
                      + "Try again or enter Q to quit");
          }
         return height;
@@ -56,7 +56,7 @@ public int getUserLength(){
          try{
              height = Integer.parseInt(input);
          } catch (NumberFormatException nf){
-             System.out.println("Please eanter a number "
+             System.out.println("Please enter a number "
                      + "Try again or enter Q to quit");
          }
         return height;
@@ -70,7 +70,7 @@ public int getUserWidth(){
          try{
              height = Integer.parseInt(input);
          } catch (NumberFormatException nf){
-             System.out.println("Please eanter a number "
+             System.out.println("Please enter a number "
                      + "Try again or enter Q to quit");
          }
         return height;

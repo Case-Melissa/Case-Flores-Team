@@ -7,6 +7,7 @@
 package byui.cit260.lehisJourney.control;
 
 import byui.cit260.lehisJourney.exceptions.CollectionControllerException;
+import byui.cit260.lehisJourney.model.Game;
 import java.util.ArrayList;
 
 /**
@@ -25,13 +26,15 @@ public class CollectionController {
         design.add("goat skin");
         design.add("camel skin");
 
-        //for (String collection : design) {
-          //  int i = design.indexOf(design);
-            //System.out.println("The items needed to design a basket are: " + design);
-           // throw new CollectionControllerException("The items needed to design a basket are:" + design);
-       // }
-       return design;
+        for (String collection : design) {
+           int i = design.indexOf(design);
+            System.out.println("The items needed to design a basket are: " + design);
+            //throw new CollectionControllerException("The items needed to design a basket are:" + design);
+        }
+      return design;
     }
+
+    
 
     public static void compareList(String userInput)
             throws CollectionControllerException {
@@ -57,6 +60,10 @@ public class CollectionController {
 
     public static void setList(boolean list) {
         CollectionController.list = list;
+    }
+
+    public boolean getCamelHair(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
