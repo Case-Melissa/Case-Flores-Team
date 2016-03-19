@@ -8,7 +8,6 @@ package byui.cit260.lehisJourney.control;
 import byui.cit260.lehisJourney.exceptions.MapControlException;
 import byui.cit260.lehisJourney.model.Location;
 import byui.cit260.lehisJourney.model.Map;
-import java.awt.Point;
 import javafx.scene.Scene;
 import lehisjourney.LehisJourney;
 
@@ -19,7 +18,7 @@ import lehisjourney.LehisJourney;
 public class MapControl {
 
     public static Map createMap() {
-        Map map = new Map(20, 20);
+        Map map = new Map(6, 6);
         return map;
     }
     public static void moveCharacterToLocation(Character character, Location location) throws MapControlException {
