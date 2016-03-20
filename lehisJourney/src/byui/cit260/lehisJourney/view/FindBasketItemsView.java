@@ -92,25 +92,25 @@ public class FindBasketItemsView extends View {
     private void getCamelHair() throws CollectionControllerException {
         CollectionController cc = new CollectionController();
         if (!cc.getCamelHair(LehisJourney.getGame())) {
-            System.out.println("You don't have the right item.");
+            System.out.println("You don't have the right item to make the basket.");
         }
     }
     private void getGoatHair() throws CollectionControllerException {
         CollectionController cc = new CollectionController();
         if (!cc.getCamelHair(LehisJourney.getGame())) {
-            System.out.println("You don't have the right item.");
+            System.out.println("You don't have the right item to make the basket.");
         }
     }
     private void getGoatSkin() throws CollectionControllerException {
         CollectionController cc = new CollectionController();
         if (!cc.getCamelHair(LehisJourney.getGame())) {
-            System.out.println("You don't have the right item.");
+            System.out.println("You don't have the right item to make the basket.");
         }
     }
     private void getCamelSkin() throws CollectionControllerException {
         CollectionController cc = new CollectionController();
         if (!cc.getCamelHair(LehisJourney.getGame())) {
-            System.out.println("You don't have the right item.");
+            System.out.println("You don't have the right item to make the basket.");
         }
     }
 }
