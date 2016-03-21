@@ -8,6 +8,7 @@ package byui.cit260.lehisJourney.control;
 import byui.cit260.lehisJourney.exceptions.TentControlException;
 import byui.cit260.lehisJourney.model.Item;
 import byui.cit260.lehisJourney.model.Tent;
+import byui.cit260.lehisJourney.view.ErrorView;
 import java.util.ArrayList;
 import java.util.Collections;
 /**
@@ -16,7 +17,7 @@ import java.util.Collections;
  */
 public class TentController {
     
-    public static void main(String a[]){
+    public void main(String a[]){
         ArrayList<String> list = new ArrayList<String>();
         list.add("Oil");
         list.add("Four");
@@ -26,9 +27,9 @@ public class TentController {
        
          
         Collections.shuffle(list);
-        System.out.println("The items you need in the tent are:");
+        ErrorView.display(this.getClass().getName(), "The items you need in the tent are:");
         for(String str: list){
-            System.out.println(str);
+            ErrorView.display(this.getClass().getName(), str);
         }
       
     }

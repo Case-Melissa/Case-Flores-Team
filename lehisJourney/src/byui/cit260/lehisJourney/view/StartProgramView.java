@@ -47,7 +47,7 @@ public class StartProgramView {
         String name = "";
         Scanner keyboard = new Scanner(System.in);
 
-        System.out.println("Please enter your name: ");
+         ErrorView.display(this.getClass().getName(),"Please enter your name: ");
 
         while (!isValidName) {
             String input = keyboard.nextLine();
@@ -56,7 +56,7 @@ public class StartProgramView {
                 isValidName = true;
                 name = input;
             } else {
-                System.out.print("Input is invalid - name must be at least 2 characters");
+                 ErrorView.display(this.getClass().getName(),"Input is invalid - name must be at least 2 characters");
             }
         }
         return name;
@@ -82,15 +82,15 @@ public class StartProgramView {
                 + "\n* laban's challenge. After completing the     *"
                 + "\n* challenge you must design a basket to carry *"
                 + "\n* the plates back to your family.             *";
-        System.out.println(welcome);
+        ErrorView.display(this.getClass().getName(), welcome);
 
     }
 
     public void displayWelcomeMessage(String playerName) {
-        System.out.println("============================");
-        System.out.println("Welcome " + playerName + ".");
-        System.out.println("Have Fun");
-        System.out.println("============================");
+         ErrorView.display(this.getClass().getName(),"============================");
+         ErrorView.display(this.getClass().getName(),"Welcome " + playerName + ".");
+         ErrorView.display(this.getClass().getName(),"Have Fun");
+         ErrorView.display(this.getClass().getName(),"============================");
 
     }
 }

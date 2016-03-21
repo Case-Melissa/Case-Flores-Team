@@ -7,6 +7,8 @@ package byui.cit260.lehisJourney.control;
 
 import byui.cit260.lehisJourney.exceptions.HuntingControllerException;
 import byui.cit260.lehisJourney.model.Map;
+import byui.cit260.lehisJourney.view.ErrorView;
+import java.io.PrintWriter;
 
 /**
  *
@@ -30,7 +32,7 @@ public class HuntingController {
         length = Math.sqrt(Math.pow(height, 2) - Math.pow(distance, 2));
        
         } catch (NumberFormatException nf){
-            System.out.println("\nYou must enter a valid number"
+            ErrorView.display(this.getClass().getName(),"\nYou must enter a valid number"
                     + "Try again or enter Q to Quit");
         }
         

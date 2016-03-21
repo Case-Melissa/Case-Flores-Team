@@ -6,6 +6,7 @@
 package byui.cit260.lehisJourney.view;
 
 import java.util.Scanner;
+import lehisjourney.LehisJourney;
 
 /**
  *
@@ -53,29 +54,29 @@ public class SaveMenuView extends View {
             case 'Q':
                 break;
             default:
-                System.out.println("Invalid option");
+                 ErrorView.display(this.getClass().getName(),"Invalid option");
                 break;
         }
         return false;
     }
 
     private void loadSavedGame() {
-        System.out.println("Load and Save Game");
+         ErrorView.display(this.getClass().getName(),"Load and Save Game");
     }
 
     private void deleteSaveGame() {
-        System.out.println("Delete Save Game");
+         ErrorView.display(this.getClass().getName(),"Delete Save Game");
     }
 
     private void saveCurrentGame() {
-        System.out.println("Save current Game");
+    ErrorView.display(this.getClass().getName(),"Save Current Game");
     }
 
     private void returnToGame() {
-        System.out.println("Return to Game");
+        ErrorView.display(this.getClass().getName(),"Return to Game");
     }
 
     private void quitWithoutSaving() {
-        System.out.println("Quit the game without saving it");
+         ErrorView.display(this.getClass().getName(),"Quit the game without saving it");
     }
 }

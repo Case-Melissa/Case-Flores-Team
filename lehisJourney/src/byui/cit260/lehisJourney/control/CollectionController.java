@@ -8,6 +8,8 @@ package byui.cit260.lehisJourney.control;
 
 import byui.cit260.lehisJourney.exceptions.CollectionControllerException;
 import byui.cit260.lehisJourney.model.Game;
+import byui.cit260.lehisJourney.view.ErrorView;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 /**
@@ -19,7 +21,7 @@ public class CollectionController {
     public static boolean list;
     private static ArrayList<String> design = new ArrayList<>();
 
-    public static ArrayList<String> collection(String a[]) throws CollectionControllerException {
+    public  ArrayList<String> collection(String a[]) throws CollectionControllerException {
 
         design.add("goat hair");
         design.add("camel hair");
@@ -28,7 +30,7 @@ public class CollectionController {
 
         for (String collection : design) {
            int i = design.indexOf(design);
-            System.out.println("The items needed to design a basket are: " + design);
+            ErrorView.display(this.getClass().getName(),"The items needed to design a basket are: " + design);
             //throw new CollectionControllerException("The items needed to design a basket are:" + design);
         }
       return design;

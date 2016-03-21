@@ -95,7 +95,7 @@ public class GamePlayMenuView extends View {
             case 'Q':
                 break;
             default:
-                System.out.println("Invalid option");
+                 ErrorView.display(this.getClass().getName(),"Invalid option");
                 break;
         }
         return false;
@@ -112,43 +112,43 @@ public class GamePlayMenuView extends View {
     }
 
     private void specialActionMenu() {
-        System.out.println("Open special action menu.");
+         ErrorView.display(this.getClass().getName(),"Open special action menu.");
     }
 
     private void moveToALocation() {
-        System.out.println("Move to a new location.");
+        ErrorView.display(this.getClass().getName(),"Move to a new location.");
     }
 
     private void moveNorth() throws MapControlException {
         MovementController mc = new MovementController();
         if(!mc.moveNorth(LehisJourney.getGame())) {
-            System.out.println("You cannot move there.");
+            ErrorView.display(this.getClass().getName(),"You cannot move there.");
         }
     }
 
     private void moveEast() throws MapControlException {
         MovementController mc = new MovementController();
         if(mc.moveEast(LehisJourney.getGame()) == false) {
-            System.out.println("You cannot move there.");
+             ErrorView.display(this.getClass().getName(),"You cannot move there.");
         }
     }
 
     private void moveSouth() throws MapControlException {
         MovementController mc = new MovementController();
         if(mc.moveSouth(LehisJourney.getGame()) == false) {
-            System.out.println("You cannot move there.");
+             ErrorView.display(this.getClass().getName(),"You cannot move there.");
         }
     }
 
     private void moveWest() throws MapControlException {
         MovementController mc = new MovementController();
         if(mc.moveWest(LehisJourney.getGame()) == false) {
-            System.out.println("You cannot move there.");
+             ErrorView.display(this.getClass().getName(),"You cannot move there.");
         }
     }
     
     private void lookForItems() {
-        System.out.println("Look for an item in current location.");
+         ErrorView.display(this.getClass().getName(),"Look for an item in current location.");
     }
 
     private void viewMap() {
@@ -157,8 +157,8 @@ public class GamePlayMenuView extends View {
 
     private void currentLocation() {
         Location loc = LehisJourney.getGame().getPlayer().getLocation();
-        System.out.println("You are at: " + loc.getRow() + ", " + loc.getColumn() + ".");
-        System.out.println("Which is a " + loc.getDescription());
+        ErrorView.display(this.getClass().getName(),"You are at: " + loc.getRow() + ", " + loc.getColumn() + ".");
+        ErrorView.display(this.getClass().getName(),"Which is a " + loc.getDescription());
     }
 
    

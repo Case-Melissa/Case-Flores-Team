@@ -37,12 +37,12 @@ public int getUserHeight(){
         int height = 0;
         Scanner keyboard = new Scanner(System.in);
         
-        System.out.println("Please enter a height: ");
+        ErrorView.display(this.getClass().getName(),"Please enter a height: ");
          String input = keyboard.nextLine();
          try{
              height = Integer.parseInt(input);
          } catch (NumberFormatException nf){
-             System.out.println("Please enter a number "
+              ErrorView.display(this.getClass().getName(),"Please enter a number "
                      + "Try again or enter Q to quit");
          }
         return height;
@@ -51,12 +51,12 @@ public int getUserLength(){
         int height = 0;
         Scanner keyboard = new Scanner(System.in);
         
-        System.out.println("Please enter a length: ");
+         ErrorView.display(this.getClass().getName(),"Please enter a length: ");
          String input = keyboard.nextLine();
          try{
              height = Integer.parseInt(input);
          } catch (NumberFormatException nf){
-             System.out.println("Please enter a number "
+              ErrorView.display(this.getClass().getName(),"Please enter a number "
                      + "Try again or enter Q to quit");
          }
         return height;
@@ -65,12 +65,12 @@ public int getUserWidth(){
         int height = 0;
         Scanner keyboard = new Scanner(System.in);
         
-        System.out.println("Please enter a width: ");
+         ErrorView.display(this.getClass().getName(),"Please enter a width: ");
          String input = keyboard.nextLine();
          try{
              height = Integer.parseInt(input);
          } catch (NumberFormatException nf){
-             System.out.println("Please enter a number "
+              ErrorView.display(this.getClass().getName(),"Please enter a number "
                      + "Try again or enter Q to quit");
          }
         return height;

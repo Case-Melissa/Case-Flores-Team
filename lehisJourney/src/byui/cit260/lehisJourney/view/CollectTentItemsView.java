@@ -59,7 +59,7 @@ public class CollectTentItemsView extends View {
             case 'Q':
                 break;
             default:
-                System.out.println("Invalid option");
+                 ErrorView.display(this.getClass().getName(),"Invalid option");
                 break;
         }
         return false;
@@ -71,23 +71,23 @@ public class CollectTentItemsView extends View {
     }
 
     private void findOil() {
-        System.out.println("Find Oil");
+         ErrorView.display(this.getClass().getName(),"Find Oil");
     }
 
     private void makeFlour() {
-        System.out.println("Make Flour");
+         ErrorView.display(this.getClass().getName(),"Make Flour");
     }
 
     private void madeClothing() {
-        System.out.println("Make Clothing");
+         ErrorView.display(this.getClass().getName(),"Make Clothing");
     }
 
     private void getTents() {
-        System.out.println("Get Tents");
+         ErrorView.display(this.getClass().getName(),"Get Tents");
     }
 
     private void createStakes() {
-        System.out.println("Create Stakes");
+         ErrorView.display(this.getClass().getName(),"Create Stakes");
     }
 
     private void makeClothing() {

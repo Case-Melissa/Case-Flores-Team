@@ -10,6 +10,7 @@ import byui.cit260.lehisJourney.model.Game;
 import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
 import byui.cit260.lehisJourney.model.Tent;
+import byui.cit260.lehisJourney.view.ErrorView;
 import byui.cit260.lehisJourney.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -59,22 +60,26 @@ public class LehisJourney {
     public static void setLogFile(PrintWriter logFile) {
         LehisJourney.logFile = logFile;
     }
+
+    public static void setCurrentGame(Game g) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public void main(String[] args) {
 
-        LehisJourney.inFile= new BufferedReader(new InputStreamReader(System.in));
+        LehisJourney.inFile = new BufferedReader(new InputStreamReader(System.in));
         
-        LehisJourney.outFile= new PrintWriter(System.out, true);
+        LehisJourney.outFile = new PrintWriter(System.out, true);
         
-        String filePath ="log.txt";
         try {
-            LehisJourney.logFile = new PrintWriter(filePath);
+        String filePath ="log.txt";
+        LehisJourney.logFile = new PrintWriter(filePath);
         } catch (Exception e) {
-            System.out.println("Exception: "+ e.toString() +
+             ErrorView.display(this.getClass().getName(),"Exception: "+ e.toString() +
                                "\nCause:" + e.getCause() +
                                "\nMessage:" + e.getMessage());
             e.printStackTrace();;
@@ -85,9 +90,10 @@ public class LehisJourney {
         startView.startProgram();
         }
         catch (Throwable te) {
-           System.out.println(te.getMessage());
-                   te.printStackTrace();
-                           startView.displayBanner();
+           ErrorView.display(this.getClass().getName(),"Exception: "+ te.toString() +
+                               "\nCause:" + te.getCause() +
+                               "\nMessage:" + te.getMessage());
+            te.printStackTrace();;
         }
         finally {
             try {
@@ -101,7 +107,7 @@ public class LehisJourney {
                     LehisJourney.logFile.close();
             } catch (IOException ex) {
                 Logger.getLogger(LehisJourney.class.getName()).log(Level.SEVERE, null, ex);
-                System.out.println("Error closing files");
+                ErrorView.display(this.getClass().getName(),"Error closing files");
                 return;
             }
             LehisJourney.outFile.close();

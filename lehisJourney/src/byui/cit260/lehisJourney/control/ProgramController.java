@@ -63,8 +63,6 @@ public class ProgramController {
         Location coordinates = character.getCoordinates();
         int returnValue = MapControl.moveCharacterToLocation(character, coordinates);
   
-        }
-          
-    
+    }
     }
 }

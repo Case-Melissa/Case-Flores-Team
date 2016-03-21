@@ -56,14 +56,14 @@ public abstract class View implements ViewInterface {
         while (!valid) {
 
             // promp for the player's name
-            System.out.println("\n" + this.displayMessage);
+             ErrorView.display(this.getClass().getName(),"\n" + this.displayMessage);
 
             // get the value entered from the keyboard
             value = keyboard.nextLine();
             value = value.trim();
 
             if (value.length() < 1) { //blank vlue entered
-                System.out.println("\n*** You must enter a value ***");
+                ErrorView.display(this.getClass().getName(),"\n*** You must enter a value ***");
                 continue;
             }
             break;

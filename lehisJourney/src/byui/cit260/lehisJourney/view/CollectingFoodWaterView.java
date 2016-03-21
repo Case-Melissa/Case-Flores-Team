@@ -64,7 +64,7 @@ public class CollectingFoodWaterView extends View {
             case 'Q':
                 break;
             default:
-                System.out.println("Invalid option");
+                ErrorView.display(this.getClass().getName(),"Invalid option");
                 break;
         }
         return false;
@@ -78,44 +78,44 @@ public class CollectingFoodWaterView extends View {
     private void lookBerries() {
        HuntingController hc = new HuntingController();
         if(!hc.lookBerries(LehisJourney.getMapOne())){
-        System.out.println("Look for Berries");
+         ErrorView.display(this.getClass().getName(),"Look for Berries");
     }
 }
     private void seekHoney() {
         HuntingController hc = new HuntingController();
         if(hc.seekHoney(LehisJourney.getMapOne())){
-        System.out.println("Seek for Honey");
+         ErrorView.display(this.getClass().getName(),"Seek for Honey");
     }
     }
 
     private void findWheat() {
        HuntingController hc = new HuntingController();
         if(hc.findWheat(LehisJourney.getMapOne())){
-        System.out.println("Find some Wheat");
+         ErrorView.display(this.getClass().getName(),"Find some Wheat");
     }
     }
     private void searchWater() {
         HuntingController hc = new HuntingController();
         if(!hc.searchWater(LehisJourney.getMapOne())){
-        System.out.println("Search for Water");
+         ErrorView.display(this.getClass().getName(),"Search for Water");
     }
     }
     private void lookUnknownPlants() {
         HuntingController hc = new HuntingController();
         if(!hc.lookUnknownPlants(LehisJourney.getMapOne())){
-        System.out.println("Look for Unknown Plants");
+         ErrorView.display(this.getClass().getName(),"Look for Unknown Plants");
     }
     }
     private void lookForItems() {
-        System.out.println("Look for an item in current location.");
+         ErrorView.display(this.getClass().getName(),"Look for an item in current location.");
     }
 private void viewMap() {
-        System.out.println(LehisJourney.getGame().getMap().getMapDisplay());
+         ErrorView.display(this.getClass().getName(),LehisJourney.getGame().getMap().getMapDisplay());
     }
 
     private void currentLocation() {
         Location loc = LehisJourney.getGame().getPlayer().getLocation();
-        System.out.println("You are at: " + loc.getRow() + ", " + loc.getColumn() + ".");
-        System.out.println("Which is a " + loc.getDescription());
+         ErrorView.display(this.getClass().getName(),"You are at: " + loc.getRow() + ", " + loc.getColumn() + ".");
+         ErrorView.display(this.getClass().getName(),"Which is a " + loc.getDescription());
     }
 }

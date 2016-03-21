@@ -49,7 +49,7 @@ public class helpMenuView extends View {
             case 'Q':
                 break;
             default:
-                System.out.println("Invalid option");
+                 ErrorView.display(this.getClass().getName(),"Invalid option");
                 break;
         }
         return false;
@@ -62,18 +62,18 @@ public class helpMenuView extends View {
     }
 
     private void help() {
-        System.out.println("Help with game play");
+         ErrorView.display(this.getClass().getName(),"Help with game play");
     }
 
     private void shortcutKeys() {
-        System.out.println("Shortcut keys for gameplay");
+         ErrorView.display(this.getClass().getName(),"Shortcut keys for gameplay");
     }
 
     private void frequentlyAskedQuestions() {
-        System.out.println("Frequently Asked Questions");
+        ErrorView.display(this.getClass().getName(),"Frequently Asked Questions");
     }
 
     private void hints() {
-        System.out.println("Hints for Solving Challenges");
+         ErrorView.display(this.getClass().getName(),"Hints for Solving Challenges");
     }
 }
