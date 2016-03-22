@@ -5,6 +5,7 @@
  */
 package byui.cit260.lehisJourney.view;
 
+import byui.cit260.lehisJourney.control.GameControl;
 import java.util.Scanner;
 import lehisjourney.LehisJourney;
 
@@ -68,9 +69,26 @@ public class SaveMenuView extends View {
          ErrorView.display(this.getClass().getName(),"Delete Save Game");
     }
 
-    private void saveCurrentGame() {
-    ErrorView.display(this.getClass().getName(),"Save Current Game");
-    }
+   private void saveGame(){
+            ErrorView.display(this.getClass().getName(),"\n\nEnter the file path for file where the "
+                 + "game is to be saved.");
+         String filePath = this.getInput();
+         try{
+             GameControl.saveCurrentGame(LehisJourney.getCurrentGame(), filePath);
+         }catch (Exception ex) {
+                 ErrorView.display("MainMenuVIew", ex.getMessage());    
+                     }
+         }
+      private void startSavedGame(){
+            ErrorView.display(this.getClass().getName(),"\n\nEnter the file path for file where the "
+                 + "game is to be saved.");
+         String filePath = this.getInput();
+         try{
+             GameControl.getSavedGame(filePath);
+         }catch (Exception ex) {
+                 ErrorView.display("MainMenuVIew", ex.getMessage());    
+                     }
+         }
 
     private void returnToGame() {
         ErrorView.display(this.getClass().getName(),"Return to Game");
