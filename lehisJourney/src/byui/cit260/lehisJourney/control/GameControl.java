@@ -20,7 +20,7 @@ import lehisjourney.LehisJourney;
  */
 public class GameControl {
 
-    public void saveCurrentGame(Game game, String filepath)
+    public void saveGame(Game game, String filepath)
             throws GameControlException, IOException {
         try(FileOutputStream fops = new FileOutputStream(filepath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
@@ -31,11 +31,19 @@ public class GameControl {
             throw new GameControlException(e.getMessage());
         }
     }
-   public void getSavedGame(String filepath) throws GameControlException{
-        Game game = null;
+    
+    
+    
+    
+   public static void saveCurrentGame(Game currentGame, String filePath) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   public static void getSavedGame(String filepath) throws GameControlException{
+        Game g = null;
         try( FileInputStream fips = new FileInputStream(filepath)){
             ObjectInputStream output = new ObjectInputStream(fips);
-            game = (Game) output.readObject();
+            g = (Game) output.readObject();
         }
         catch(FileNotFoundException fnfe) {
             throw new GameControlException(fnfe.getMessage());
@@ -43,7 +51,7 @@ public class GameControl {
         catch (Exception e){
             throw new GameControlException(e.getMessage());
         }
-        LehisJourney.setCurrentGame(game);
+        LehisJourney.setCurrentGame(g);
     }
     
 }
