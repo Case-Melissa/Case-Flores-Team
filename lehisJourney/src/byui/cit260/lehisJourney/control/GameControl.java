@@ -35,11 +35,11 @@ public class GameControl {
     
     
     
-   public void saveCurrentGame(Game currentGame, String filePath) {
+   public static void saveCurrentGame(Game currentGame, String filePath) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-   public void getSavedGame(String filepath) throws GameControlException{
+   public static void getSavedGame(String filepath) throws GameControlException{
         Game g = null;
         try( FileInputStream fips = new FileInputStream(filepath)){
             ObjectInputStream output = new ObjectInputStream(fips);
