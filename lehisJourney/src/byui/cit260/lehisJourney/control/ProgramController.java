@@ -65,4 +65,12 @@ public class ProgramController {
   
     }
     }
+
+    public static void saveCurrentGame(Game currentGame, String filePath) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void getSavedGame(String filePath) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -6,6 +6,7 @@
 package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.control.GameControl;
+import byui.cit260.lehisJourney.control.ProgramController;
 import java.util.Scanner;
 import lehisjourney.LehisJourney;
 
@@ -74,7 +75,7 @@ public class SaveMenuView extends View {
                  + "game is to be saved.");
          String filePath = this.getInput();
          try{
-             GameControl.saveCurrentGame(LehisJourney.getCurrentGame(), filePath);
+             ProgramController.saveCurrentGame(LehisJourney.getCurrentGame(), filePath);
          }catch (Exception ex) {
                  ErrorView.display("MainMenuVIew", ex.getMessage());    
                      }
@@ -84,7 +85,7 @@ public class SaveMenuView extends View {
                  + "game is to be saved.");
          String filePath = this.getInput();
          try{
-             GameControl.getSavedGame(filePath);
+             ProgramController.getSavedGame(filePath);
          }catch (Exception ex) {
                  ErrorView.display("MainMenuVIew", ex.getMessage());    
                      }
@@ -96,5 +97,9 @@ public class SaveMenuView extends View {
 
     private void quitWithoutSaving() {
          ErrorView.display(this.getClass().getName(),"Quit the game without saving it");
+    }
+
+    private void saveCurrentGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

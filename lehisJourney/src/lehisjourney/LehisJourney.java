@@ -61,7 +61,7 @@ public class LehisJourney {
         LehisJourney.logFile = logFile;
     }
 
-    public static void setCurrentGame(Game g) {
+    public static void setCurrentGame(Game game) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
