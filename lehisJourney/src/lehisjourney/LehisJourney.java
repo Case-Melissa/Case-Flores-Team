@@ -31,8 +31,8 @@ public class LehisJourney {
     private static Map mapOne = new Map();
     private static Design basketOne = new Design();
     private static Tent tentOne = new Tent();
-    
-    private static PrintWriter outFile= null;
+
+    private static PrintWriter outFile = null;
 
     public static PrintWriter getOutFile() {
         return outFile;
@@ -50,7 +50,7 @@ public class LehisJourney {
         LehisJourney.inFile = inFile;
     }
     private static BufferedReader inFile = null;
-    
+
     private static PrintWriter logFile = null;
 
     public static PrintWriter getLogFile() {
@@ -64,7 +64,6 @@ public class LehisJourney {
     public static void setCurrentGame(Game game) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 
     /**
      * @param args the command line arguments
@@ -72,35 +71,36 @@ public class LehisJourney {
     public static void main(String[] args) {
 
         LehisJourney.inFile = new BufferedReader(new InputStreamReader(System.in));
-        
+
         LehisJourney.outFile = new PrintWriter(System.out, true);
-        
+
         try {
-        String filePath ="log.txt";
-        LehisJourney.logFile = new PrintWriter(filePath);
+            String filePath = "log.txt";
+            LehisJourney.logFile = new PrintWriter(filePath);
         } catch (Exception e) {
             System.out.println("main - Error");
             e.printStackTrace();;
         }
-    
+
         StartProgramView startView = new StartProgramView();
-        try{
-        startView.startProgram();
-        }
-        catch (Throwable te) {
-           System.out.println("main - Error");
+        try {
+            startView.startProgram();
+        } catch (Throwable te) {
+            System.out.println("main - Error");
             te.printStackTrace();;
-        }
-        finally {
+        } finally {
             try {
-                if (LehisJourney.inFile != null)
+                if (LehisJourney.inFile != null) {
                     LehisJourney.inFile.close();
-                
-                if (LehisJourney.outFile != null)
+                }
+
+                if (LehisJourney.outFile != null) {
                     LehisJourney.outFile.close();
-                
-                if (LehisJourney.logFile != null)
+                }
+
+                if (LehisJourney.logFile != null) {
                     LehisJourney.logFile.close();
+                }
             } catch (IOException ex) {
                 Logger.getLogger(LehisJourney.class.getName()).log(Level.SEVERE, null, ex);
                 System.out.println("main - Error closing files");
@@ -154,5 +154,4 @@ public class LehisJourney {
         LehisJourney.tentOne = tentOne;
     }
 
-    
 }

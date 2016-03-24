@@ -1,0 +1,59 @@
+byui.cit260.lehisJourney.view.StartProgramView - 
+***********************************************
+*                                             *
+* This is the game of Lehi's Journey          *
+* In this game you will become one of Lehi's  *
+* four sons and go on a journey into the      *
+* wilderness, then back to visit Laban and    *
+* finally go back to your father.             *
+*                                             *
+* To start this perilous journey you will     *
+* need to gather supplies to pitch a tent in  *
+* the wilderness. You must find a good        *
+* location to pitch the tent. Along the       *
+* journey you will have to hunt for resources *
+* and food. Then you will have to complete    *
+* laban's challenge. After completing the     *
+* challenge you must design a basket to carry *
+* the plates back to your family.             *
+byui.cit260.lehisJourney.view.StartProgramView - Please enter your name: 
+byui.cit260.lehisJourney.view.StartProgramView - ============================
+byui.cit260.lehisJourney.view.StartProgramView - Welcome syl.
+byui.cit260.lehisJourney.view.StartProgramView - Have Fun
+byui.cit260.lehisJourney.view.StartProgramView - ============================
+byui.cit260.lehisJourney.view.MainMenuView - 
+
+
+----------------------------------
+| Main Menu
+----------------------------------
+N - New Game
+? - Help Menu
+Q - Quit
+----------------------------------
+byui.cit260.lehisJourney.view.GamePlayMenuView - 
+
+
+V - View map
+C - View current location
+N - Move North
+S - Move South
+E - Move East
+W - Move West
+I - Look for items at current location
+O - Move to a location
+A - Special Action
+Q - Quit
+byui.cit260.lehisJourney.view.GamePlayMenuView - 
+
+
+V - View map
+C - View current location
+N - Move North
+S - Move South
+E - Move East
+W - Move West
+I - Look for items at current location
+O - Move to a location
+A - Special Action
+Q - Quit
