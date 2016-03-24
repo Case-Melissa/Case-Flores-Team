@@ -21,39 +21,4 @@ byui.cit260.lehisJourney.view.StartProgramView - ============================
 byui.cit260.lehisJourney.view.StartProgramView - Welcome syl.
 byui.cit260.lehisJourney.view.StartProgramView - Have Fun
 byui.cit260.lehisJourney.view.StartProgramView - ============================
-byui.cit260.lehisJourney.view.MainMenuView - 
-
-
-----------------------------------
-| Main Menu
-----------------------------------
-N - New Game
-? - Help Menu
-Q - Quit
-----------------------------------
-byui.cit260.lehisJourney.view.GamePlayMenuView - 
-
-
-V - View map
-C - View current location
-N - Move North
-S - Move South
-E - Move East
-W - Move West
-I - Look for items at current location
-O - Move to a location
-A - Special Action
-Q - Quit
-byui.cit260.lehisJourney.view.GamePlayMenuView - 
-
-
-V - View map
-C - View current location
-N - Move North
-S - Move South
-E - Move East
-W - Move West
-I - Look for items at current location
-O - Move to a location
-A - Special Action
-Q - Quit
+byui.cit260.lehisJourney.view.GamePlayMenuView - Invalid option
