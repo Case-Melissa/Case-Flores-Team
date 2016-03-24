@@ -7,6 +7,8 @@ package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.control.ProgramController;
 import byui.cit260.lehisJourney.model.Player;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import lehisjourney.LehisJourney;
 
@@ -15,6 +17,9 @@ import lehisjourney.LehisJourney;
  * @author home
  */
 public class StartProgramView {
+
+    protected final BufferedReader keyboard = LehisJourney.getInFile();
+    protected final PrintWriter console = LehisJourney.getOutFile();
 
     public StartProgramView() {
 
@@ -38,30 +43,34 @@ public class StartProgramView {
 //        SaveMenuView saveMenu = new SaveMenuView();
 //        saveMenu.displayMenu();
 //
-//        System.out.println("Name is " + player.getName());
+//        console.println("Name is " + player.getName());
     }
 
     public String getPlayerName() {
 
         boolean isValidName = false;
         String name = "";
-        Scanner keyboard = new Scanner(System.in);
 
-         ErrorView.display(this.getClass().getName(),"Please enter your name: ");
+        ErrorView.display(this.getClass().getName(), "Please enter your name: ");
 
         while (!isValidName) {
-            String input = keyboard.nextLine();
-
+            String input = null;
+            try {
+                input = keyboard.readLine();
+            } catch (Exception e) {
+                ErrorView.display(this.getClass().getName(),"Error reading input");
+                
+            }
             if (input == null || input.length() >= 2) {
                 isValidName = true;
                 name = input;
             } else {
-                 ErrorView.display(this.getClass().getName(),"Input is invalid - name must be at least 2 characters");
+                ErrorView.display(this.getClass().getName(), "Input is invalid - name must be at least 2 characters");
             }
         }
         return name;
     }
-    
+
     public void displayBanner() {
         String welcome = " ";
         welcome
@@ -87,10 +96,10 @@ public class StartProgramView {
     }
 
     public void displayWelcomeMessage(String playerName) {
-         ErrorView.display(this.getClass().getName(),"============================");
-         ErrorView.display(this.getClass().getName(),"Welcome " + playerName + ".");
-         ErrorView.display(this.getClass().getName(),"Have Fun");
-         ErrorView.display(this.getClass().getName(),"============================");
+        ErrorView.display(this.getClass().getName(), "============================");
+        ErrorView.display(this.getClass().getName(), "Welcome " + playerName + ".");
+        ErrorView.display(this.getClass().getName(), "Have Fun");
+        ErrorView.display(this.getClass().getName(), "============================");
 
     }
 }

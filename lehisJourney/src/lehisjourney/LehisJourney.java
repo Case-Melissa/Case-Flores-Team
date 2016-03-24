@@ -26,6 +26,9 @@ import java.util.logging.Logger;
  */
 public class LehisJourney {
 
+    protected final BufferedReader keyboard = LehisJourney.getInFile();
+    protected final PrintWriter console = LehisJourney.getOutFile();
+    
     private static Player player;
     private static Game game;
     private static Map mapOne = new Map();

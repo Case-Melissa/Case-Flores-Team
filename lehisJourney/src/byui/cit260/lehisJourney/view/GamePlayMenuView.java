@@ -152,7 +152,7 @@ public class GamePlayMenuView extends View {
     }
 
     private void viewMap() {
-        System.out.println(LehisJourney.getGame().getMap().getMapDisplay());
+        console.println(LehisJourney.getGame().getMap().getMapDisplay());
     }
 
     private void currentLocation() {
