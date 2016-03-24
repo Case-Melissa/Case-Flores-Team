@@ -69,7 +69,7 @@ public class LehisJourney {
     /**
      * @param args the command line arguments
      */
-    public void main(String[] args) {
+    public static void main(String[] args) {
 
         LehisJourney.inFile = new BufferedReader(new InputStreamReader(System.in));
         
@@ -79,9 +79,7 @@ public class LehisJourney {
         String filePath ="log.txt";
         LehisJourney.logFile = new PrintWriter(filePath);
         } catch (Exception e) {
-             ErrorView.display(this.getClass().getName(),"Exception: "+ e.toString() +
-                               "\nCause:" + e.getCause() +
-                               "\nMessage:" + e.getMessage());
+            System.out.println("main - Error");
             e.printStackTrace();;
         }
     
@@ -90,9 +88,7 @@ public class LehisJourney {
         startView.startProgram();
         }
         catch (Throwable te) {
-           ErrorView.display(this.getClass().getName(),"Exception: "+ te.toString() +
-                               "\nCause:" + te.getCause() +
-                               "\nMessage:" + te.getMessage());
+           System.out.println("main - Error");
             te.printStackTrace();;
         }
         finally {
@@ -107,7 +103,7 @@ public class LehisJourney {
                     LehisJourney.logFile.close();
             } catch (IOException ex) {
                 Logger.getLogger(LehisJourney.class.getName()).log(Level.SEVERE, null, ex);
-                ErrorView.display(this.getClass().getName(),"Error closing files");
+                System.out.println("main - Error closing files");
                 return;
             }
             LehisJourney.outFile.close();
