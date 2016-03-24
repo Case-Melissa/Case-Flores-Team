@@ -21,4 +21,3 @@ byui.cit260.lehisJourney.view.StartProgramView - ============================
 byui.cit260.lehisJourney.view.StartProgramView - Welcome syl.
 byui.cit260.lehisJourney.view.StartProgramView - Have Fun
 byui.cit260.lehisJourney.view.StartProgramView - ============================
-byui.cit260.lehisJourney.view.GamePlayMenuView - Invalid option
