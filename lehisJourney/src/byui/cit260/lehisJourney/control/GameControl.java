@@ -34,10 +34,10 @@ public class GameControl {
     }
 
    public static void getSavedGame(String filepath) throws GameControlException{
-        Game g = null;
+        Game game = null;
         try( FileInputStream fips = new FileInputStream(filepath)){
             ObjectInputStream output = new ObjectInputStream(fips);
-            g = (Game) output.readObject();
+            game = (Game) output.readObject();
         }
         catch(FileNotFoundException fnfe) {
             throw new GameControlException(fnfe.getMessage());
@@ -45,7 +45,7 @@ public class GameControl {
         catch (Exception e){
             throw new GameControlException(e.getMessage());
         }
-        LehisJourney.getCurrentGame(g);
+        LehisJourney.getCurrentGame(game);
     }
     
 }
