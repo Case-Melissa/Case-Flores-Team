@@ -39,10 +39,10 @@ public class StartProgramView {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
 
-//        SaveMenuView saveMenu = new SaveMenuView();
-//        saveMenu.displayMenu();
-//
-//        console.println("Name is " + player.getName());
+        SaveMenuView saveMenu = new SaveMenuView();
+        saveMenu.displayMenu();
+
+        console.println("Name is " + player.getName());
     }
 
     public String getPlayerName() {
@@ -64,7 +64,7 @@ public class StartProgramView {
                 isValidName = true;
                 name = input;
             } else {
-               ErrorView.display(this.getClass().getName(), "Input is invalid - name must be at least 2 characters");
+                ErrorView.display(this.getClass().getName(), "Input is invalid - name must be at least 2 characters");
             }
         }
         return name;
@@ -91,7 +91,7 @@ public class StartProgramView {
                 + "\n* challenge you must design a basket to carry *"
                 + "\n* the plates back to your family.             *";
 
-       this.console.println(welcome);
+        this.console.println(welcome);
 
     }
 
