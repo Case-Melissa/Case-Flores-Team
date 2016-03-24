@@ -56,47 +56,48 @@ public class SaveMenuView extends View {
             case 'Q':
                 break;
             default:
-                 console.println("Invalid option");
+                console.println("Invalid option");
                 break;
         }
         return false;
     }
 
     private void loadSavedGame() {
-         ErrorView.display(this.getClass().getName(),"Load and Save Game");
+        this.console.println("Load and Save Game");
     }
 
     private void deleteSaveGame() {
-         ErrorView.display(this.getClass().getName(),"Delete Save Game");
+        this.console.println("Delete Save Game");
     }
 
-   private void saveGame(){
-            ErrorView.display(this.getClass().getName(),"\n\nEnter the file path for file where the "
-                 + "game is to be saved.");
-         String filePath = this.getInput();
-         try{
-             ProgramController.saveCurrentGame(LehisJourney.getCurrentGame(), filePath);
-         }catch (Exception ex) {
-                 ErrorView.display("MainMenuVIew", ex.getMessage());    
-                     }
-         }
-      private void startSavedGame(){
-            ErrorView.display(this.getClass().getName(),"\n\nEnter the file path for file where the "
-                 + "game is to be saved.");
-         String filePath = this.getInput();
-         try{
-             ProgramController.getSavedGame(filePath);
-         }catch (Exception ex) {
-                 ErrorView.display("MainMenuVIew", ex.getMessage());    
-                     }
-         }
+    private void saveGame() {
+        this.console.println("\n\nEnter the file path for file where the "
+                + "game is to be saved.");
+        String filePath = this.getInput();
+        try {
+            ProgramController.saveCurrentGame(LehisJourney.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuVIew", ex.getMessage());
+        }
+    }
+
+    private void startSavedGame() {
+        this.console.println("\n\nEnter the file path for file where the "
+                + "game is to be saved.");
+        String filePath = this.getInput();
+        try {
+            ProgramController.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuVIew", ex.getMessage());
+        }
+    }
 
     private void returnToGame() {
-        ErrorView.display(this.getClass().getName(),"Return to Game");
+        this.console.println("Return to Game");
     }
 
     private void quitWithoutSaving() {
-         ErrorView.display(this.getClass().getName(),"Quit the game without saving it");
+        this.console.println("Quit the game without saving it");
     }
 
     private void saveCurrentGame() {
