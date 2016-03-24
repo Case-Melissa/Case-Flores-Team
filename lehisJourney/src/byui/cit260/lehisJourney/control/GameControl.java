@@ -30,6 +30,7 @@ public class GameControl {
         catch(IOException e){
             throw new GameControlException(e.getMessage());
         }
+        LehisJourney.setCurrentGame(game);
     }
 
    public static void getSavedGame(String filepath) throws GameControlException{
@@ -44,7 +45,7 @@ public class GameControl {
         catch (Exception e){
             throw new GameControlException(e.getMessage());
         }
-        LehisJourney.setCurrentGame(g);
+        LehisJourney.getCurrentGame(g);
     }
     
 }
