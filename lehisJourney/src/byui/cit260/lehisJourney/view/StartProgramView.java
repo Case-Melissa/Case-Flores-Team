@@ -9,7 +9,6 @@ import byui.cit260.lehisJourney.control.ProgramController;
 import byui.cit260.lehisJourney.model.Player;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
-import java.util.Scanner;
 import lehisjourney.LehisJourney;
 
 /**

@@ -16,16 +16,16 @@ public class ErrorView {
 
     private static final PrintWriter errorFile = LehisJourney.getOutFile();
     private static final PrintWriter logFile = LehisJourney.getLogFile();
-    
+
     public static void display(String className, String errorMessage) {
-        
+
         errorFile.println(
-                    "---------------------------------------------"
-                  + "\n- ERROR - " + errorMessage
-                  + "\n--------------------------------------------");
+                "---------------------------------------------"
+                + "\n- ERROR - " + errorMessage
+                + "\n--------------------------------------------");
         // log error
         logFile.println(className + " - " + errorMessage);
         logFile.flush();
-        
+
     }
 }

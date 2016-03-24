@@ -40,7 +40,7 @@ public class MainMenuView extends View {
             case 'Q':
                 return true;
             default:
-                console.println("Invalid option");
+                ErrorView.display(this.getClass().getName(),"Invalid option");
                 break;
         }
 
