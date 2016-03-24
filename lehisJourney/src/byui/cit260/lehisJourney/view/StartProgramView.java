@@ -51,15 +51,15 @@ public class StartProgramView {
         boolean isValidName = false;
         String name = "";
 
-        ErrorView.display(this.getClass().getName(), "Please enter your name: ");
+        this.console.println("Please enter your name: ");
 
         while (!isValidName) {
             String input = null;
             try {
                 input = keyboard.readLine();
             } catch (Exception e) {
-                ErrorView.display(this.getClass().getName(),"Error reading input");
-                
+                ErrorView.display(this.getClass().getName(), "Error reading input");
+
             }
             if (input == null || input.length() >= 2) {
                 isValidName = true;
@@ -91,16 +91,16 @@ public class StartProgramView {
                 + "\n* laban's challenge. After completing the     *"
                 + "\n* challenge you must design a basket to carry *"
                 + "\n* the plates back to your family.             *";
-        
+
         console.println(welcome);
 
     }
 
     public void displayWelcomeMessage(String playerName) {
-        ErrorView.display(this.getClass().getName(), "============================");
-        ErrorView.display(this.getClass().getName(), "Welcome " + playerName + ".");
-        ErrorView.display(this.getClass().getName(), "Have Fun");
-        ErrorView.display(this.getClass().getName(), "============================");
+        this.console.println("============================");
+        this.console.println("Welcome " + playerName + ".");
+        this.console.println("Have Fun");
+        this.console.println("============================");
 
     }
 }
