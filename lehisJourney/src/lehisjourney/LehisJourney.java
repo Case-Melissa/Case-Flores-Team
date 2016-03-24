@@ -28,7 +28,7 @@ public class LehisJourney {
 
     protected final BufferedReader keyboard = LehisJourney.getInFile();
     protected final PrintWriter console = LehisJourney.getOutFile();
-    
+
     private static Player player;
     private static Game game;
     private static Map mapOne = new Map();
@@ -73,47 +73,45 @@ public class LehisJourney {
      */
     public static void main(String[] args) {
 
-        LehisJourney.inFile = new BufferedReader(new InputStreamReader(System.in));
-
-        LehisJourney.outFile = new PrintWriter(System.out, true);
-
         try {
+            LehisJourney.inFile = new BufferedReader(new InputStreamReader(System.in));
+            LehisJourney.outFile = new PrintWriter(System.out, true);
+
             String filePath = "log.txt";
             LehisJourney.logFile = new PrintWriter(filePath);
-        } catch (Exception e) {
-            System.out.println("main - Error");
-            e.printStackTrace();;
-        }
 
-        StartProgramView startView = new StartProgramView();
-        try {
+            StartProgramView startView = new StartProgramView();
+            
             startView.startProgram();
-        } catch (Throwable te) {
-            System.out.println("main - Error");
-            te.printStackTrace();;
-        } finally {
-            try {
-                if (LehisJourney.inFile != null) {
-                    LehisJourney.inFile.close();
-                }
 
-                if (LehisJourney.outFile != null) {
-                    LehisJourney.outFile.close();
-                }
-
-                if (LehisJourney.logFile != null) {
-                    LehisJourney.logFile.close();
-                }
-            } catch (IOException ex) {
-                Logger.getLogger(LehisJourney.class.getName()).log(Level.SEVERE, null, ex);
-                System.out.println("main - Error closing files");
-                return;
-            }
-            LehisJourney.outFile.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            
         }
-    }
 
-    public static Player getPlayer() {
+       finally {
+            try {
+            if (LehisJourney.inFile != null) {
+                LehisJourney.inFile.close();
+            }
+
+            if (LehisJourney.outFile != null) {
+                LehisJourney.outFile.close();
+            }
+
+            if (LehisJourney.logFile != null) {
+                LehisJourney.logFile.close();
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(LehisJourney.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("main - Error closing files");
+            return;
+        }
+        LehisJourney.outFile.close();
+    }
+}
+
+public static Player getPlayer() {
         return player;
     }
 
