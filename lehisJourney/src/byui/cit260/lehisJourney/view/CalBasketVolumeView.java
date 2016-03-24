@@ -8,7 +8,6 @@ package byui.cit260.lehisJourney.view;
 import byui.cit260.lehisJourney.model.Design;
 import java.util.Scanner;
 
-
 /**
  *
  * @author Melissa Case
@@ -33,48 +32,52 @@ public class CalBasketVolumeView extends View {
         value = value.toUpperCase();// converts to upper case
         return true;
     }
-public int getUserHeight(){
+
+    public int getUserHeight() {
         int height = 0;
         Scanner keyboard = new Scanner(System.in);
-        
-        ErrorView.display(this.getClass().getName(),"Please enter a height: ");
-         String input = keyboard.nextLine();
-         try{
-             height = Integer.parseInt(input);
-         } catch (NumberFormatException nf){
-              ErrorView.display(this.getClass().getName(),"Please enter a number "
-                     + "Try again or enter Q to quit");
-         }
+
+        this.console.println("Please enter a height: ");
+        String input = keyboard.nextLine();
+        try {
+            height = Integer.parseInt(input);
+        } catch (NumberFormatException nf) {
+            this.console.println("Please enter a number "
+                    + "Try again or enter Q to quit");
+        }
         return height;
     }
-public int getUserLength(){
+
+    public int getUserLength() {
         int height = 0;
         Scanner keyboard = new Scanner(System.in);
-        
-         ErrorView.display(this.getClass().getName(),"Please enter a length: ");
-         String input = keyboard.nextLine();
-         try{
-             height = Integer.parseInt(input);
-         } catch (NumberFormatException nf){
-              ErrorView.display(this.getClass().getName(),"Please enter a number "
-                     + "Try again or enter Q to quit");
-         }
+
+        this.console.println("Please enter a length: ");
+        String input = keyboard.nextLine();
+        try {
+            height = Integer.parseInt(input);
+        } catch (NumberFormatException nf) {
+            ErrorView.display(this.getClass().getName(), "Please enter a number "
+                    + "Try again or enter Q to quit");
+        }
         return height;
     }
-public int getUserWidth(){
+
+    public int getUserWidth() {
         int height = 0;
         Scanner keyboard = new Scanner(System.in);
-        
-         ErrorView.display(this.getClass().getName(),"Please enter a width: ");
-         String input = keyboard.nextLine();
-         try{
-             height = Integer.parseInt(input);
-         } catch (NumberFormatException nf){
-              ErrorView.display(this.getClass().getName(),"Please enter a number "
-                     + "Try again or enter Q to quit");
-         }
+
+        this.console.println("Please enter a width: ");
+        String input = keyboard.nextLine();
+        try {
+            height = Integer.parseInt(input);
+        } catch (NumberFormatException nf) {
+            ErrorView.display(this.getClass().getName(), "Please enter a number "
+                    + "Try again or enter Q to quit");
+        }
         return height;
     }
+
     private void calBasketVolume() {
         CalBasketVolumeView calBasketVolume = new CalBasketVolumeView();
         calBasketVolume.display();

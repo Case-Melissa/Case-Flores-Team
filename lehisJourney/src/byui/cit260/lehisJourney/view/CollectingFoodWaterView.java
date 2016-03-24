@@ -36,35 +36,30 @@ public class CollectingFoodWaterView extends View {
         char selection = value.toUpperCase().charAt(0); //convert to all upper case
 
         switch (selection) {
-            case 'B':
-            {
+            case 'B': {
                 lookBerries();
             }
-                break;
-            case 'H':
-            {
+            break;
+            case 'H': {
                 seekHoney();
             }
-                break;
-            case 'E':
-            {
+            break;
+            case 'E': {
                 findWheat();
                 break;
             }
-            case 'W':
-            {
+            case 'W': {
                 searchWater();
             }
-                break;
-            case 'U':
-            {
+            break;
+            case 'U': {
                 lookUnknownPlants();
             }
-                break;
+            break;
             case 'Q':
                 break;
             default:
-                ErrorView.display(this.getClass().getName(),"Invalid option");
+                ErrorView.display(this.getClass().getName(), "Invalid option");
                 break;
         }
         return false;
@@ -74,48 +69,53 @@ public class CollectingFoodWaterView extends View {
         CollectingFoodWaterView CollectingFoodWater = new CollectingFoodWaterView();
         CollectingFoodWater.display();
     }
-    
+
     private void lookBerries() {
-       HuntingController hc = new HuntingController();
-        if(!hc.lookBerries(LehisJourney.getMapOne())){
-         ErrorView.display(this.getClass().getName(),"Look for Berries");
+        HuntingController hc = new HuntingController();
+        if (!hc.lookBerries(LehisJourney.getMapOne())) {
+            this.console.println("Look for Berries");
+        }
     }
-}
+
     private void seekHoney() {
         HuntingController hc = new HuntingController();
-        if(hc.seekHoney(LehisJourney.getMapOne())){
-         ErrorView.display(this.getClass().getName(),"Seek for Honey");
-    }
+        if (hc.seekHoney(LehisJourney.getMapOne())) {
+            this.console.println("Seek for Honey");
+        }
     }
 
     private void findWheat() {
-       HuntingController hc = new HuntingController();
-        if(hc.findWheat(LehisJourney.getMapOne())){
-         ErrorView.display(this.getClass().getName(),"Find some Wheat");
+        HuntingController hc = new HuntingController();
+        if (hc.findWheat(LehisJourney.getMapOne())) {
+            this.console.println("Find some Wheat");
+        }
     }
-    }
+
     private void searchWater() {
         HuntingController hc = new HuntingController();
-        if(!hc.searchWater(LehisJourney.getMapOne())){
-         ErrorView.display(this.getClass().getName(),"Search for Water");
+        if (!hc.searchWater(LehisJourney.getMapOne())) {
+            this.console.println("Search for Water");
+        }
     }
-    }
+
     private void lookUnknownPlants() {
         HuntingController hc = new HuntingController();
-        if(!hc.lookUnknownPlants(LehisJourney.getMapOne())){
-         ErrorView.display(this.getClass().getName(),"Look for Unknown Plants");
+        if (!hc.lookUnknownPlants(LehisJourney.getMapOne())) {
+            this.console.println("Look for Unknown Plants");
+        }
     }
-    }
+
     private void lookForItems() {
-         ErrorView.display(this.getClass().getName(),"Look for an item in current location.");
+        this.console.println("Look for an item in current location.");
     }
-private void viewMap() {
-         ErrorView.display(this.getClass().getName(),LehisJourney.getGame().getMap().getMapDisplay());
+
+    private void viewMap() {
+        this.console.println(LehisJourney.getGame().getMap().getMapDisplay());
     }
 
     private void currentLocation() {
         Location loc = LehisJourney.getGame().getPlayer().getLocation();
-         ErrorView.display(this.getClass().getName(),"You are at: " + loc.getRow() + ", " + loc.getColumn() + ".");
-         ErrorView.display(this.getClass().getName(),"Which is a " + loc.getDescription());
+        this.console.println("You are at: " + loc.getRow() + ", " + loc.getColumn() + ".");
+        this.console.println("Which is a " + loc.getDescription());
     }
 }

@@ -4,10 +4,11 @@
  * and open the template in the editor.
  */
 package byui.cit260.lehisJourney.view;
+
 import byui.cit260.lehisJourney.control.TentController;
 import byui.cit260.lehisJourney.model.Item;
 import static byui.cit260.lehisJourney.model.Item.tent;
-import java.util.Scanner;
+
 /**
  *
  * @author AllenMac
@@ -18,7 +19,7 @@ public class CollectTentItemsView extends View {
      *
      */
     public CollectTentItemsView() {
-            super("\n"
+        super("\n"
                 + "\n--------------------------------"
                 + "\n   Collect Items For Your Tent"
                 + "\n--------------------------------"
@@ -34,12 +35,11 @@ public class CollectTentItemsView extends View {
     @Override
     public boolean doAction(String choice) {
         Item item = null;
-        
-        
+
         int returnItem = TentController.collectTentItems(item); //convert to all upper case
         TentController.collectTentItems(tent, Item.tent);
         int selection = 0;
-        
+
         switch (selection) {
             case 'O':
                 findOil();
@@ -59,7 +59,7 @@ public class CollectTentItemsView extends View {
             case 'Q':
                 break;
             default:
-                 ErrorView.display(this.getClass().getName(),"Invalid option");
+                ErrorView.display(this.getClass().getName(), "Invalid option");
                 break;
         }
         return false;
@@ -71,31 +71,27 @@ public class CollectTentItemsView extends View {
     }
 
     private void findOil() {
-         ErrorView.display(this.getClass().getName(),"Find Oil");
+        this.console.println("Find Oil");
     }
 
     private void makeFlour() {
-         ErrorView.display(this.getClass().getName(),"Make Flour");
+        ErrorView.display(this.getClass().getName(), "Make Flour");
     }
 
     private void madeClothing() {
-         ErrorView.display(this.getClass().getName(),"Make Clothing");
+        ErrorView.display(this.getClass().getName(), "Make Clothing");
     }
 
     private void getTents() {
-         ErrorView.display(this.getClass().getName(),"Get Tents");
+        ErrorView.display(this.getClass().getName(), "Get Tents");
     }
 
     private void createStakes() {
-         ErrorView.display(this.getClass().getName(),"Create Stakes");
+        ErrorView.display(this.getClass().getName(), "Create Stakes");
     }
 
     private void makeClothing() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-   
 }
-   
-
-

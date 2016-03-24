@@ -7,8 +7,6 @@ package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.control.CollectionController;
 import byui.cit260.lehisJourney.exceptions.CollectionControllerException;
-import byui.cit260.lehisJourney.model.Item;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import lehisjourney.LehisJourney;
@@ -36,11 +34,9 @@ public class FindBasketItemsView extends View {
     public boolean doAction(String value) {
 
         char selection = value.toUpperCase().charAt(0); //convert to all upper case
-        
 
         switch (selection) {
-            case 'G': 
-            {
+            case 'G': {
                 try {
                     getGoatHair();
                 } catch (CollectionControllerException ex) {
@@ -48,8 +44,7 @@ public class FindBasketItemsView extends View {
                 }
             }
             break;
-            case 'C': 
-            {
+            case 'C': {
                 try {
                     getCamelHair();
                 } catch (CollectionControllerException ex) {
@@ -57,8 +52,7 @@ public class FindBasketItemsView extends View {
                 }
             }
             break;
-            case 'S': 
-            {
+            case 'S': {
                 try {
                     getGoatSkin();
                 } catch (CollectionControllerException ex) {
@@ -66,8 +60,7 @@ public class FindBasketItemsView extends View {
                 }
             }
             break;
-            case 'K': 
-            {
+            case 'K': {
                 try {
                     getCamelSkin();
                 } catch (CollectionControllerException ex) {
@@ -76,7 +69,7 @@ public class FindBasketItemsView extends View {
             }
             break;
             default:
-                 ErrorView.display(this.getClass().getName(),"Invalid option");
+                ErrorView.display(this.getClass().getName(), "Invalid option");
                 break;
         }
         return false;
@@ -92,25 +85,28 @@ public class FindBasketItemsView extends View {
     private void getCamelHair() throws CollectionControllerException {
         CollectionController cc = new CollectionController();
         if (!cc.getCamelHair(LehisJourney.getGame())) {
-             ErrorView.display(this.getClass().getName(),"You don't have the right item to make the basket.");
+            ErrorView.display(this.getClass().getName(), "You don't have the right item to make the basket.");
         }
     }
+
     private void getGoatHair() throws CollectionControllerException {
         CollectionController cc = new CollectionController();
         if (!cc.getCamelHair(LehisJourney.getGame())) {
-            ErrorView.display(this.getClass().getName(),"You don't have the right item to make the basket.");
+            ErrorView.display(this.getClass().getName(), "You don't have the right item to make the basket.");
         }
     }
+
     private void getGoatSkin() throws CollectionControllerException {
         CollectionController cc = new CollectionController();
         if (!cc.getCamelHair(LehisJourney.getGame())) {
-             ErrorView.display(this.getClass().getName(),"You don't have the right item to make the basket.");
+            ErrorView.display(this.getClass().getName(), "You don't have the right item to make the basket.");
         }
     }
+
     private void getCamelSkin() throws CollectionControllerException {
         CollectionController cc = new CollectionController();
         if (!cc.getCamelHair(LehisJourney.getGame())) {
-             ErrorView.display(this.getClass().getName(),"You don't have the right item to make the basket.");
+            ErrorView.display(this.getClass().getName(), "You don't have the right item to make the basket.");
         }
     }
 }

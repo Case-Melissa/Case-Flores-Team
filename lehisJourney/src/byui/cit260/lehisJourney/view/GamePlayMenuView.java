@@ -42,46 +42,42 @@ public class GamePlayMenuView extends View {
             case 'V':
                 viewMap();
                 break;
-                
+
             case 'C':
                 currentLocation();
                 break;
-            case 'N':
-        {
-            try {
-                moveNorth();
-            } catch (MapControlException ex) {
-                Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            case 'N': {
+                try {
+                    moveNorth();
+                } catch (MapControlException ex) {
+                    Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
-            case 'S':
-        {
-            try {
-                moveSouth();
-            } catch (MapControlException ex) {
-                Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            break;
+            case 'S': {
+                try {
+                    moveSouth();
+                } catch (MapControlException ex) {
+                    Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
-            case 'E':
-        {
-            try {
-                moveEast();
-            } catch (MapControlException ex) {
-                Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            break;
+            case 'E': {
+                try {
+                    moveEast();
+                } catch (MapControlException ex) {
+                    Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
-            case 'W':
-        {
-            try {
-                moveWest();
-            } catch (MapControlException ex) {
-                Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            break;
+            case 'W': {
+                try {
+                    moveWest();
+                } catch (MapControlException ex) {
+                    Logger.getLogger(GamePlayMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
+            break;
             case 'I':
                 lookForItems();
                 break;
@@ -94,7 +90,7 @@ public class GamePlayMenuView extends View {
             case 'Q':
                 break;
             default:
-                 this.console.println("Invalid option");
+                this.console.println("Invalid option");
                 break;
         }
         return false;
@@ -120,34 +116,34 @@ public class GamePlayMenuView extends View {
 
     private void moveNorth() throws MapControlException {
         MovementController mc = new MovementController();
-        if(mc.moveNorth(LehisJourney.getGame()) == false) {
-            ErrorView.display(this.getClass().getName(),"You cannot move there.");
+        if (mc.moveNorth(LehisJourney.getGame()) == false) {
+            ErrorView.display(this.getClass().getName(), "You cannot move there.");
         }
     }
 
     private void moveEast() throws MapControlException {
         MovementController mc = new MovementController();
-        if(mc.moveEast(LehisJourney.getGame()) == false) {
-             ErrorView.display(this.getClass().getName(),"You cannot move there.");
+        if (mc.moveEast(LehisJourney.getGame()) == false) {
+            ErrorView.display(this.getClass().getName(), "You cannot move there.");
         }
     }
 
     private void moveSouth() throws MapControlException {
         MovementController mc = new MovementController();
-        if(mc.moveSouth(LehisJourney.getGame()) == false) {
-             ErrorView.display(this.getClass().getName(),"You cannot move there.");
+        if (mc.moveSouth(LehisJourney.getGame()) == false) {
+            ErrorView.display(this.getClass().getName(), "You cannot move there.");
         }
     }
 
     private void moveWest() throws MapControlException {
         MovementController mc = new MovementController();
-        if(mc.moveWest(LehisJourney.getGame()) == false) {
-             ErrorView.display(this.getClass().getName(),"You cannot move there.");
+        if (mc.moveWest(LehisJourney.getGame()) == false) {
+            ErrorView.display(this.getClass().getName(), "You cannot move there.");
         }
     }
-    
+
     private void lookForItems() {
-       this.console.println("Look for an item in current location.");
+        this.console.println("Look for an item in current location.");
     }
 
     private void viewMap() {
@@ -157,8 +153,7 @@ public class GamePlayMenuView extends View {
     private void currentLocation() {
         Location loc = LehisJourney.getGame().getPlayer().getLocation();
         this.console.println("You are at: " + loc.getRow() + ", " + loc.getColumn() + "."
-                        +"Which is a " + loc.getDescription());
+                + "Which is a " + loc.getDescription());
     }
 
-   
 }

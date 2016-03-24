@@ -5,7 +5,6 @@
  */
 package byui.cit260.lehisJourney.view;
 
-import byui.cit260.lehisJourney.control.GameControl;
 import byui.cit260.lehisJourney.control.ProgramController;
 import lehisjourney.LehisJourney;
 
@@ -41,7 +40,7 @@ public class MainMenuView extends View {
             case 'Q':
                 return true;
             default:
-                 console.println("Invalid option");
+                console.println("Invalid option");
                 break;
         }
 
@@ -61,5 +60,5 @@ public class MainMenuView extends View {
         GamePlayMenuView gpm = new GamePlayMenuView();
         gpm.display();
     }
-     
+
 }

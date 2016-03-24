@@ -7,7 +7,6 @@ package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.control.GameControl;
 import byui.cit260.lehisJourney.control.ProgramController;
-import java.util.Scanner;
 import lehisjourney.LehisJourney;
 
 /**
@@ -77,7 +76,7 @@ public class SaveMenuView extends View {
         try {
             ProgramController.saveCurrentGame(LehisJourney.getCurrentGame(), filePath);
         } catch (Exception ex) {
-            ErrorView.display("MainMenuVIew", ex.getMessage());
+            ErrorView.display("MainMenuView", ex.getMessage());
         }
     }
 
