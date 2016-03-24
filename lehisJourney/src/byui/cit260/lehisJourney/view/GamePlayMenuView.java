@@ -121,7 +121,7 @@ public class GamePlayMenuView extends View {
 
     private void moveNorth() throws MapControlException {
         MovementController mc = new MovementController();
-        if(!mc.moveNorth(LehisJourney.getGame())) {
+        if(mc.moveNorth(LehisJourney.getGame()) == false) {
             ErrorView.display(this.getClass().getName(),"You cannot move there.");
         }
     }
