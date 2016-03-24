@@ -40,7 +40,7 @@ public class MainMenuView extends View {
             case 'Q':
                 return true;
             default:
-                ErrorView.display(this.getClass().getName(),"Invalid option");
+                ErrorView.display(this.getClass().getName(), "Invalid option");
                 break;
         }
 
@@ -56,7 +56,7 @@ public class MainMenuView extends View {
     private void startNewGame() {
         ProgramController.createNewGame(LehisJourney.getPlayer());
 
-//        console.println("CALLED START NEW GAME - NOT IMPLEMENTED YET.");
+        this.console.println("start new game");
         GamePlayMenuView gpm = new GamePlayMenuView();
         gpm.display();
     }
