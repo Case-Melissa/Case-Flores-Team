@@ -90,7 +90,7 @@ public class GamePlayMenuView extends View {
             case 'Q':
                 break;
             default:
-                ErrorView.display(this.getClass().getName(),"Invalid option");
+               this.console.println("Invalid option");
                 break;
         }
         return false;
