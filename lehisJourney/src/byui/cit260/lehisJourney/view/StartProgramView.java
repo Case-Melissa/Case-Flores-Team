@@ -65,7 +65,7 @@ public class StartProgramView {
                 isValidName = true;
                 name = input;
             } else {
-                console.println("Input is invalid - name must be at least 2 characters");
+               ErrorView.display(this.getClass().getName(), "Input is invalid - name must be at least 2 characters");
             }
         }
         return name;
@@ -92,7 +92,7 @@ public class StartProgramView {
                 + "\n* challenge you must design a basket to carry *"
                 + "\n* the plates back to your family.             *";
 
-        console.println(welcome);
+       this.console.println(welcome);
 
     }
 
