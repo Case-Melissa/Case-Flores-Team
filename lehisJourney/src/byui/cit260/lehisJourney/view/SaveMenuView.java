@@ -56,7 +56,7 @@ public class SaveMenuView extends View {
             case 'Q':
                 break;
             default:
-                console.println("Invalid option");
+                this.console.println("Invalid option");
                 break;
         }
         return false;
