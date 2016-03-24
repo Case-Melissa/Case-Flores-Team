@@ -20,7 +20,7 @@ public abstract class View implements ViewInterface {
 
     protected final BufferedReader keyboard = LehisJourney.getInFile();
     protected final PrintWriter console = LehisJourney.getOutFile();
-    
+
     public View() {
     }
 
@@ -48,22 +48,22 @@ public abstract class View implements ViewInterface {
     @Override
     public String getInput() {
 
-        Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
         String value = null;
 
         // while a valid name has not been retrieved
         while (!valid) {
+            try {
+                // get the value entered from the keyboard
+                value = keyboard.readLine();
+                value = value.trim();
+                value = value.toUpperCase();
 
-            // promp for the player's name
-             ErrorView.display(this.getClass().getName(),"\n" + this.displayMessage);
-
-            // get the value entered from the keyboard
-            value = keyboard.nextLine();
-            value = value.trim();
-
+            } catch (Exception e) {
+                ErrorView.display(this.getClass().getName(),"Error reading input");
+            }
             if (value.length() < 1) { //blank vlue entered
-                ErrorView.display(this.getClass().getName(),"\n*** You must enter a value ***");
+                ErrorView.display(this.getClass().getName(), "\n*** You must enter a value ***");
                 continue;
             }
             break;
