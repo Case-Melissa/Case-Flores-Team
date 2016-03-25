@@ -12,7 +12,7 @@ import java.io.IOException;
  *
  * @author Melissa Case
  */
-public abstract class PlayerMenuView extends View{
+public class PlayerMenuView extends View{
     
     public PlayerMenuView(){
        super("\n"
