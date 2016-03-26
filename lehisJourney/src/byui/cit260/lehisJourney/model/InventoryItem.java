@@ -17,6 +17,7 @@ public class InventoryItem {
     int quantityInStock;
     int requiredAmount;
     
+    
     public static InventoryItem[] createItemList() {
         //Create and array of inventory items
         InventoryItem[] inventory
@@ -122,6 +123,18 @@ public class InventoryItem {
     private void setRequiredAmount(int i) {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         requiredAmount = i;
+    }
+    public String getDescription(){
+     
+        return description;
+    }
+    public int getRequiredAmount(){
+    
+        return requiredAmount;
+    }
+    public int getQuantityPrintInStock(){
+    
+        return quantityInStock;
     }
 }
 
