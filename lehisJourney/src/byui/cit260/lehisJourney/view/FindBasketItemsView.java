@@ -135,7 +135,7 @@ public class FindBasketItemsView extends View {
             
         }
         else{
-            printBasketItemsReport(FindBasketItemsView.getLogFile());
+            printBasketItemsReport(InventoryItem.getLogFile());
         }
     }
     public void printBasketItemsReport (String outputLocation) {
