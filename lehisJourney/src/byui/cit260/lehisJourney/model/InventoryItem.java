@@ -13,6 +13,10 @@ package byui.cit260.lehisJourney.model;
  */
 public class InventoryItem {
 
+    public static String getLogFile() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     String description;
     int quantityInStock;
     int requiredAmount;

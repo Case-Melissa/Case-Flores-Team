@@ -1,2 +1,0 @@
-byui.cit260.lehisJourney.view.GamePlayMenuView - 
-*** You must enter a value ***
