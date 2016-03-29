@@ -9,7 +9,6 @@ package byui.cit260.lehisJourney.control;
 import byui.cit260.lehisJourney.exceptions.CollectionControllerException;
 import byui.cit260.lehisJourney.model.Game;
 import byui.cit260.lehisJourney.view.ErrorView;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 /**

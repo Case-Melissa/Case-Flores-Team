@@ -9,11 +9,9 @@ import byui.cit260.lehisJourney.exceptions.MapControlException;
 import byui.cit260.lehisJourney.model.Character;
 import byui.cit260.lehisJourney.model.Game;
 import byui.cit260.lehisJourney.model.InventoryItem;
-import byui.cit260.lehisJourney.model.Item;
 import byui.cit260.lehisJourney.model.Location;
 import byui.cit260.lehisJourney.model.Map;
 import byui.cit260.lehisJourney.model.Player;
-import java.awt.Point;
 import lehisjourney.LehisJourney;
 
 /**
