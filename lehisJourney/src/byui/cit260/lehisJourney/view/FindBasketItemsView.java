@@ -138,9 +138,10 @@ public class FindBasketItemsView extends View {
             printBasketItemsReport(InventoryItem.getLogFile());
         }
     }
-    public void printBasketItemsReport (String outputLocation) {
+    public void printBasketItemsReport () {
         
         InventoryItem[] inventory = InventoryItem.createItemList();
+        String outputLocation = "C:/report.txt";
         
         try (PrintWriter out = new PrintWriter(outputLocation)) {
             out.println("\n\n             List of Basket Items Report                   ");
@@ -156,6 +157,10 @@ public class FindBasketItemsView extends View {
                 System.out.println ("I/O Error: " + ex.getMessage());
                 System.out.flush();
         }
+    }
+
+    private void printBasketItemsReport(String logFile) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
