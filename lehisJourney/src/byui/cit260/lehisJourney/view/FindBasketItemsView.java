@@ -154,6 +154,7 @@ public class FindBasketItemsView extends View {
         }
             } catch (IOException ex) {
                 System.out.println ("I/O Error: " + ex.getMessage());
+                System.out.flush();
         }
     }
 
