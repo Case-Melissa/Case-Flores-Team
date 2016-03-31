@@ -135,7 +135,7 @@ public class FindBasketItemsView extends View {
             
         }
         else{
-            printBasketItemsReport(InventoryItem.getLogFile());
+            printBasketItemsReport();
         }
     }
     public void printBasketItemsReport () {
@@ -159,9 +159,6 @@ public class FindBasketItemsView extends View {
         }
     }
 
-    private void printBasketItemsReport(String logFile) {
-        this.console.println(InventoryItem.getLogFile());
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 }
