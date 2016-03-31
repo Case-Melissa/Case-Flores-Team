@@ -30,6 +30,7 @@ public class MovementController {
 
         Location newLocation = map.getLocation(newRow, currentCol);
         
+        
         player.setLocation(newLocation);
 
         return true;
