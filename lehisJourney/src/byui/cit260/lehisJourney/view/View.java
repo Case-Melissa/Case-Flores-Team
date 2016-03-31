@@ -52,6 +52,7 @@ public abstract class View implements ViewInterface {
 
         // while a valid name has not been retrieved
         while (!valid) {
+            console.println(displayMessage);
             try {
                 // get the value entered from the keyboard
                 value = keyboard.readLine();

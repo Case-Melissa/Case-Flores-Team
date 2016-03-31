@@ -85,37 +85,35 @@ public class LehisJourney {
             LehisJourney.logFile = new PrintWriter(filePath);
 
             StartProgramView startView = new StartProgramView();
-            
+
             startView.startProgram();
 
         } catch (Exception e) {
             e.printStackTrace();
-            
-        }
 
-       finally {
+        } finally {
             try {
-            if (LehisJourney.inFile != null) {
-                LehisJourney.inFile.close();
-            }
+                if (LehisJourney.inFile != null) {
+                    LehisJourney.inFile.close();
+                }
 
-            if (LehisJourney.outFile != null) {
-                LehisJourney.outFile.close();
-            }
+                if (LehisJourney.outFile != null) {
+                    LehisJourney.outFile.close();
+                }
 
-            if (LehisJourney.logFile != null) {
-                LehisJourney.logFile.close();
+                if (LehisJourney.logFile != null) {
+                    LehisJourney.logFile.close();
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(LehisJourney.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("main - Error closing files");
+                return;
             }
-        } catch (IOException ex) {
-            Logger.getLogger(LehisJourney.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("main - Error closing files");
-            return;
+            LehisJourney.outFile.close();
         }
-        LehisJourney.outFile.close();
     }
-}
 
-public static Player getPlayer() {
+    public static Player getPlayer() {
         return player;
     }
 
