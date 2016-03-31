@@ -23,19 +23,18 @@ public class MovementController {
         Location currentLocation = player.getLocation();
         Map map = game.getMap();
         
+        if (currentLocation.getRow()== 0) {
+            throw new MapControlException("Can not move player to location "
+                                         +"because that location is outside"
+                                         +"the bounds of the map.");
+        }
+        
         int currentCol = currentLocation.getColumn();
         int currentRow = currentLocation.getRow();
         int newRow = currentRow - 1;
         
 
         Location newLocation = map.getLocation(newRow, currentCol);
-        
-        if (currentLocation.getColumn() == map.getCols() - 1) {
-            throw new MapControlException("Can not move player to location "
-                                         +"because that location is outside"
-                                         +"the bounds of the map.");
-        }
-        
         
         player.setLocation(newLocation);
 
