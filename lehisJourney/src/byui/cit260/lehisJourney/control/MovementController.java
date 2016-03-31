@@ -23,12 +23,18 @@ public class MovementController {
         Location currentLocation = player.getLocation();
         Map map = game.getMap();
         
-        
         int currentCol = currentLocation.getColumn();
         int currentRow = currentLocation.getRow();
         int newRow = currentRow - 1;
+        
 
         Location newLocation = map.getLocation(newRow, currentCol);
+        
+        if (currentLocation.getColumn() == map.getCols() - 1) {
+            throw new MapControlException("Can not move player to location "
+                                         +"because that location is outside"
+                                         +"the bounds of the map.");
+        }
         
         
         player.setLocation(newLocation);
@@ -45,7 +51,7 @@ public class MovementController {
         if (currentLocation.getColumn() == map.getCols() - 1) {
             throw new MapControlException("Can not move player to location "
                                          +"because that location is outside"
-                                         +"the boudns of the map.");
+                                         +"the bounds of the map.");
         }
         
         player.setLocation(map.getLocation(currentLocation.getRow(), currentLocation.getColumn() + 1));
@@ -61,7 +67,7 @@ public class MovementController {
         if (currentLocation.getRow() == map.getRows()- 1) {
             throw new MapControlException("Can not move player to location "
                                          +"because that location is outside"
-                                         +"the boudns of the map.");
+                                         +"the bounds of the map.");
         }
         
         player.setLocation(map.getLocation(currentLocation.getRow() + 1, currentLocation.getColumn()));
@@ -77,7 +83,7 @@ public class MovementController {
         if (currentLocation.getColumn() == 0) {
             throw new MapControlException("Can not move player to location "
                                          +"because that location is outside"
-                                         +"the boudns of the map.");
+                                         +"the bounds of the map.");
         }
         
         player.setLocation(map.getLocation(currentLocation.getRow(), currentLocation.getColumn() - 1));
