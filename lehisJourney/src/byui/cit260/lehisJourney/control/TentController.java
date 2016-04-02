@@ -16,6 +16,10 @@ import java.util.Collections;
  * @author AllenMac
  */
 public class TentController {
+
+    public static int collectTentItems(Item item) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public void main(String a[]){
         ArrayList<String> list = new ArrayList<String>();
@@ -33,19 +37,15 @@ public class TentController {
         }
       
     }
-    public static void collectTentItems(Tent tent, Item item) throws TentControlException {
+    public void collectTentItems(Tent tent, Item item) throws TentControlException {
         int newItem = (int) tent.getItems();
 
         if (newItem < 0) {
-            throw new TentControlException("You have collected too much. Reduce your load");
+            ErrorView.display(this.getClass().getName(), "You have collected too much. Reduce your load");
         }
     }
 
-    public static void collectTentItems(Item item, Item item0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static int collectTentItems(Item item) {
+    public  void collectTentItems(Item item, Item item0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

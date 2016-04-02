@@ -37,7 +37,7 @@ public class CollectTentItemsView extends View {
         Item item = null;
 
         int returnItem = TentController.collectTentItems(item); //convert to all upper case
-        TentController.collectTentItems(tent, Item.tent);
+        
         int selection = 0;
 
         switch (selection) {
@@ -75,23 +75,19 @@ public class CollectTentItemsView extends View {
     }
 
     private void makeFlour() {
-        ErrorView.display(this.getClass().getName(), "Make Flour");
-    }
-
-    private void madeClothing() {
-        ErrorView.display(this.getClass().getName(), "Make Clothing");
-    }
-
-    private void getTents() {
-        ErrorView.display(this.getClass().getName(), "Get Tents");
-    }
-
-    private void createStakes() {
-        ErrorView.display(this.getClass().getName(), "Create Stakes");
+       this.console.println("Make Flour");
     }
 
     private void makeClothing() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.console.println("Make Clothing");
+    }
+
+    private void getTents() {
+        this.console.println("Get Tents");
+    }
+
+    private void createStakes() {
+        this.console.println("Create Stakes");
     }
 
 }
