@@ -7,7 +7,6 @@ package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.control.TentController;
 import byui.cit260.lehisJourney.model.Item;
-import static byui.cit260.lehisJourney.model.Item.tent;
 
 /**
  *
