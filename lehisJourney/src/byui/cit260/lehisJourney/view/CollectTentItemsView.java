@@ -5,8 +5,16 @@
  */
 package byui.cit260.lehisJourney.view;
 
+import byui.cit260.lehisJourney.control.CollectionController;
 import byui.cit260.lehisJourney.control.TentController;
+import byui.cit260.lehisJourney.exceptions.CollectionControllerException;
+import byui.cit260.lehisJourney.model.InventoryItem;
 import byui.cit260.lehisJourney.model.Item;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import lehisjourney.LehisJourney;
 
 /**
  *
@@ -36,57 +44,116 @@ public class CollectTentItemsView extends View {
         Item item = null;
 
         int returnItem = TentController.collectTentItems(item); //convert to all upper case
-        
+
         int selection = 0;
 
         switch (selection) {
-            case 'O':
-                findOil();
-                break;
-            case 'F':
-                makeFlour();
-                break;
-            case 'C':
-                makeClothing();
-                break;
-            case 'T':
-                getTents();
-                break;
-            case 'S':
-                createStakes();
-                break;
-            case 'Q':
-                break;
+            case 'O': {
+                try {
+                    findOil();
+                } catch (CollectionControllerException ex) {
+                    Logger.getLogger(CollectTentItemsView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case 'F': {
+                try {
+                    makeFlour();
+                } catch (CollectionControllerException ex) {
+                    Logger.getLogger(CollectTentItemsView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case 'C': {
+                try {
+                    makeClothing();
+                } catch (CollectionControllerException ex) {
+                    Logger.getLogger(CollectTentItemsView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case 'T': {
+                try {
+                    getTents();
+                } catch (CollectionControllerException ex) {
+                    Logger.getLogger(CollectTentItemsView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case 'S': {
+                try {
+                    createStakes();
+                } catch (CollectionControllerException ex) {
+                    Logger.getLogger(CollectTentItemsView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
             default:
                 ErrorView.display(this.getClass().getName(), "Invalid option");
                 break;
         }
         return false;
+
     }
 
     private void CollectTentItems() {
+        
         CollectTentItemsView CollectTentItems = new CollectTentItemsView();
         CollectTentItems.display();
     }
 
-    private void findOil() {
-        this.console.println("Find Oil");
+    private void findOil() throws CollectionControllerException {
+        CollectionController cc = new CollectionController();
+        if (!cc.findOil(LehisJourney.getGame())) {
+            ErrorView.display(this.getClass().getName(), "You don't have enough oil.");
+        }
     }
 
-    private void makeFlour() {
-       this.console.println("Make Flour");
+    private void makeFlour() throws CollectionControllerException {
+        CollectionController cc = new CollectionController();
+        if (!cc.makeFlour(LehisJourney.getGame())) {
+            ErrorView.display(this.getClass().getName(), "You don't have enough flor");
+        }
     }
 
-    private void makeClothing() {
-        this.console.println("Make Clothing");
+    private void makeClothing() throws CollectionControllerException {
+        CollectionController cc = new CollectionController();
+        if (!cc.makeClothing(LehisJourney.getGame())) {
+            ErrorView.display(this.getClass().getName(), "You don't have enough clothing.");
+        }
     }
 
-    private void getTents() {
-        this.console.println("Get Tents");
+    private void getTents() throws CollectionControllerException {
+        CollectionController cc = new CollectionController();
+        if (!cc.getTents(LehisJourney.getGame())) {
+            ErrorView.display(this.getClass().getName(), "You don't have enough tents.");
+        }
     }
 
-    private void createStakes() {
-        this.console.println("Create Stakes");
+    private void createStakes() throws CollectionControllerException {
+        CollectionController cc = new CollectionController();
+        if (!cc.createStakes(LehisJourney.getGame())) {
+            ErrorView.display(this.getClass().getName(), "You don't have enough stakes.");
+        } else {
+            printTentItemsReport();
+        }
     }
 
+    private void printTentItemsReport() {
+        InventoryItem[] inventory = InventoryItem.createItemList();
+        String outputLocation = "C:/report.txt";
+
+        try (PrintWriter out = new PrintWriter(outputLocation)) {
+            out.println("\n\n             List of Tent Items Report                   ");
+            out.printf("%n%-20s%10s%10s", "Description", "Required", "In Stock");
+            out.printf("%n%-20s%10s%10s", "----------------", "------------", "------------");
+
+            for (InventoryItem item : inventory) {
+                out.printf("%n%-20s%7d%7d", item.getDescription(), item.getRequiredAmount(), item.getQuantityPrintInStock());
+            }
+        } catch (IOException ex) {
+            System.out.println("I/O Error: " + ex.getMessage());
+            System.out.flush();
+        }
+    }
 }

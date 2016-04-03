@@ -6,7 +6,6 @@
 package byui.cit260.lehisJourney.view;
 
 import byui.cit260.lehisJourney.control.HuntingController;
-import byui.cit260.lehisJourney.exceptions.HuntingControllerException;
 import byui.cit260.lehisJourney.model.Location;
 import lehisjourney.LehisJourney;
 

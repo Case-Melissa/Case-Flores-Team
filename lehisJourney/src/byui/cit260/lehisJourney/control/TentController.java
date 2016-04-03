@@ -31,7 +31,7 @@ public class TentController {
        
          
         Collections.shuffle(list);
-        ErrorView.display(this.getClass().getName(), "The items you need in the tent are:");
+          ErrorView.display(this.getClass().getName(),"The items you need in the tent are:");
         for(String str: list){
             ErrorView.display(this.getClass().getName(), str);
         }
@@ -43,9 +43,10 @@ public class TentController {
         if (newItem < 0) {
             ErrorView.display(this.getClass().getName(), "You have collected too much. Reduce your load");
         }
+        else {
+            
+        }
     }
 
-    public  void collectTentItems(Item item, Item item0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
