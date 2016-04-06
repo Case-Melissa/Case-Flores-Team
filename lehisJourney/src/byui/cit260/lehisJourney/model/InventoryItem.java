@@ -1,5 +1,3 @@
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,15 +11,10 @@ package byui.cit260.lehisJourney.model;
  */
 public class InventoryItem {
 
-    public static String getLogFile() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     String description;
     int quantityInStock;
     int requiredAmount;
-    
-    
+
     public static InventoryItem[] createItemList() {
         //Create and array of inventory items
         InventoryItem[] inventory
@@ -114,6 +107,10 @@ public class InventoryItem {
         return inventory;
     }
 
+    public static String getLogFile() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private void setDescription(String oil) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         description = oil;
@@ -128,17 +125,19 @@ public class InventoryItem {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         requiredAmount = i;
     }
-    public String getDescription(){
-     
+
+    public String getDescription() {
+
         return description;
     }
-    public int getRequiredAmount(){
-    
+
+    public int getRequiredAmount() {
+
         return requiredAmount;
     }
-    public int getQuantityPrintInStock(){
-    
+
+    public int getQuantityPrintInStock() {
+
         return quantityInStock;
     }
 }
-

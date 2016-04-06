@@ -26,10 +26,6 @@ import java.util.logging.Logger;
  */
 public class LehisJourney {
 
-    public static void getCurrentGame(Game game) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     protected final BufferedReader keyboard = LehisJourney.getInFile();
     protected final PrintWriter console = LehisJourney.getOutFile();
 
@@ -71,7 +67,9 @@ public class LehisJourney {
     public static void setCurrentGame(Game game) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    public static void getCurrentGame(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     /**
      * @param args the command line arguments
      */
