@@ -17,9 +17,7 @@ import java.util.Collections;
  */
 public class TentController {
 
-    public static int collectTentItems(Item item) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
     
     public void main(String a[]){
         ArrayList<String> list = new ArrayList<String>();
@@ -36,6 +34,9 @@ public class TentController {
             ErrorView.display(this.getClass().getName(), str);
         }
       
+    }
+     public static int collectTentItems(Item item) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     public void collectTentItems(Tent tent, Item item) throws TentControlException {
         int newItem = (int) tent.getItems();
