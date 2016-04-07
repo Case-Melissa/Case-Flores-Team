@@ -149,7 +149,7 @@ public class CollectTentItemsView extends View {
             out.printf("%n%-20s%10s%10s", "----------------", "------------", "------------");
 
             for (InventoryItem item : inventory) {
-                out.printf("%n%-20s%7d%7d", item.getDescription(), item.getRequiredAmount(), item.getQuantityPrintInStock());
+                out.printf("%n%-20s%7d%7d", item.getDescription(), item.getRequiredAmount(), item.getQuantityInStock());
             }
         } catch (IOException ex) {
             System.out.println("I/O Error: " + ex.getMessage());

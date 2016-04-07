@@ -136,7 +136,7 @@ public class InventoryItem {
         return requiredAmount;
     }
 
-    public int getQuantityPrintInStock() {
+    public int getQuantityInStock() {
 
         return quantityInStock;
     }

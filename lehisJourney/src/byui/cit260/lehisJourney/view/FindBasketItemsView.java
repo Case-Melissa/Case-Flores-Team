@@ -151,7 +151,7 @@ public class FindBasketItemsView extends View {
         for (InventoryItem item : inventory) {
             out.printf("%n%-20s%7d%7d", item.getDescription()
 				      , item.getRequiredAmount()
-                                      , item.getQuantityPrintInStock());
+                                      , item.getQuantityInStock());
         }
             } catch (IOException ex) {
                 System.out.println ("I/O Error: " + ex.getMessage());
