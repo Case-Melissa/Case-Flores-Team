@@ -112,7 +112,7 @@ public class CollectTentItemsView extends View {
     private void makeFlour() throws CollectionControllerException {
         CollectionController cc = new CollectionController();
         if (!cc.makeFlour(LehisJourney.getGame())) {
-            ErrorView.display(this.getClass().getName(), "You don't have enough flor");
+            ErrorView.display(this.getClass().getName(), "You don't have enough flour");
         }
     }
 
